@@ -1,0 +1,102 @@
+python test_rl1.py 
+[Genesis] [14:18:45] [INFO] ╭─────────────────────────────────────────────────────────────────────────────────────╮
+[Genesis] [14:18:45] [INFO] │┈┉┈┉┈┉┈┉┈┉┈┉┈┉┈┉┈┉┈┉┈┉┈┉┈┉┈┉┈┉┈┉┈┉┈┉┈┉ Genesis ┈┉┈┉┈┉┈┉┈┉┈┉┈┉┈┉┈┉┈┉┈┉┈┉┈┉┈┉┈┉┈┉┈┉┈┉┈┉│
+[Genesis] [14:18:45] [INFO] ╰─────────────────────────────────────────────────────────────────────────────────────╯
+[Genesis] [14:18:45] [INFO] Running on [Apple M5 Max] with backend gs.metal. Device memory: 128.00 GB.
+[Genesis] [14:18:45] [INFO] 🚀 Genesis initialized. 🔖 version: 1.4.5, 🎨 theme: dark, 🌱 seed: None, 🐛 debug: False, 📏 precision: 32, 🔥 performance: False, 💬 verbose: INFO
+[Genesis] [14:18:45] [WARNING] Interactive viewer running in main thread. It will only be responsive if a simulation is running.
+[Genesis] [14:18:45] [INFO] Scene <0a413e5> created.
+/Users/anupamkaul/other_git/hugging-face/lerobot/.conda_env/lib/python3.12/site-packages/genesis/utils/geom.py:1476: RuntimeWarning: divide by zero encountered in matmul
+  new_pos = np.matmul(R, pos_.swapaxes(1, 2)).swapaxes(1, 2)
+/Users/anupamkaul/other_git/hugging-face/lerobot/.conda_env/lib/python3.12/site-packages/genesis/utils/geom.py:1476: RuntimeWarning: overflow encountered in matmul
+  new_pos = np.matmul(R, pos_.swapaxes(1, 2)).swapaxes(1, 2)
+/Users/anupamkaul/other_git/hugging-face/lerobot/.conda_env/lib/python3.12/site-packages/genesis/utils/geom.py:1476: RuntimeWarning: invalid value encountered in matmul
+  new_pos = np.matmul(R, pos_.swapaxes(1, 2)).swapaxes(1, 2)
+[Genesis] [14:18:45] [INFO] Adding <gs.engine.entities.RigidEntity> plane_0b29a17. idx: 0, morph: <gs.morphs.Plane>, material: <gs.materials.Rigid>.
+[Genesis] [14:18:47] [INFO] Adding <gs.engine.entities.RigidEntity> go2_description_ecc6c08. idx: 1, morph: <gs.morphs.URDF(file='/Users/anupamkaul/other_git/hugging-face/lerobot/.conda_env/lib/python3.12/site-packages/genesis/assets/urdf/go2/urdf/go2.urdf')>, material: <gs.materials.Rigid>.
+[Genesis] [14:18:47] [INFO] Building scene <0a413e5>...
+[Genesis] [14:18:47] [WARNING] Neutral robot position (qpos0) exceeds joint limits.
+/Users/anupamkaul/other_git/hugging-face/lerobot/.conda_env/lib/python3.12/site-packages/genesis/engine/mesh.py:972: RuntimeWarning: divide by zero encountered in matmul
+  [hull_vid[np.argmax(nodes_chunk @ verts[hull_vid].T, axis=-1)] for nodes_chunk in nodes_chunks]
+/Users/anupamkaul/other_git/hugging-face/lerobot/.conda_env/lib/python3.12/site-packages/genesis/engine/mesh.py:972: RuntimeWarning: overflow encountered in matmul
+  [hull_vid[np.argmax(nodes_chunk @ verts[hull_vid].T, axis=-1)] for nodes_chunk in nodes_chunks]
+/Users/anupamkaul/other_git/hugging-face/lerobot/.conda_env/lib/python3.12/site-packages/genesis/engine/mesh.py:972: RuntimeWarning: invalid value encountered in matmul
+  [hull_vid[np.argmax(nodes_chunk @ verts[hull_vid].T, axis=-1)] for nodes_chunk in nodes_chunks]
+/Users/anupamkaul/other_git/hugging-face/lerobot/.conda_env/lib/python3.12/site-packages/genesis/engine/mesh.py:999: RuntimeWarning: divide by zero encountered in matmul
+  np.arctan2(-arcs_start_chart @ meridians_normal.T, arcs_orthogonal_chart @ meridians_normal.T),
+/Users/anupamkaul/other_git/hugging-face/lerobot/.conda_env/lib/python3.12/site-packages/genesis/engine/mesh.py:999: RuntimeWarning: overflow encountered in matmul
+  np.arctan2(-arcs_start_chart @ meridians_normal.T, arcs_orthogonal_chart @ meridians_normal.T),
+/Users/anupamkaul/other_git/hugging-face/lerobot/.conda_env/lib/python3.12/site-packages/genesis/engine/mesh.py:999: RuntimeWarning: invalid value encountered in matmul
+  np.arctan2(-arcs_start_chart @ meridians_normal.T, arcs_orthogonal_chart @ meridians_normal.T),
+/Users/anupamkaul/other_git/hugging-face/lerobot/.conda_env/lib/python3.12/site-packages/genesis/engine/mesh.py:1041: RuntimeWarning: divide by zero encountered in matmul
+  directions_chart = directions @ CHARTS_ROT[i_chart].T
+/Users/anupamkaul/other_git/hugging-face/lerobot/.conda_env/lib/python3.12/site-packages/genesis/engine/mesh.py:1041: RuntimeWarning: overflow encountered in matmul
+  directions_chart = directions @ CHARTS_ROT[i_chart].T
+/Users/anupamkaul/other_git/hugging-face/lerobot/.conda_env/lib/python3.12/site-packages/genesis/engine/mesh.py:1041: RuntimeWarning: invalid value encountered in matmul
+  directions_chart = directions @ CHARTS_ROT[i_chart].T
+[Genesis] [14:18:47] [INFO] Compiling simulation kernels...
+[Genesis] [14:18:48] [INFO] Building visualizer...
+[Genesis] [14:18:48] [INFO] Viewer created. Resolution: 1489×1117, refresh_rate: 60, dt: 0.01s, realtime_factor: 1.0 (real-time target: 100.0 FPS).
+🚀 64 Parallel Robot Dog Environments Initialized Successfully on M5 Max GPU Backend!
+[Genesis] [14:18:48] [INFO] Running at 1,098.49 FPS (17.16 FPS per env, 64 envs).
+[Genesis] [14:18:49] [INFO] Running at 1,162.10 FPS (18.16 FPS per env, 64 envs).
+[Genesis] [14:18:49] [INFO] Running at 1,323.80 FPS (20.68 FPS per env, 64 envs).
+[Genesis] [14:18:49] [INFO] Running at 1,477.19 FPS (23.08 FPS per env, 64 envs).
+[Genesis] [14:18:49] [INFO] Running at 1,624.24 FPS (25.38 FPS per env, 64 envs).
+[Genesis] [14:18:49] [INFO] Running at 1,794.70 FPS (28.04 FPS per env, 64 envs).
+[Genesis] [14:18:49] [INFO] Running at 1,943.32 FPS (30.36 FPS per env, 64 envs).
+[Genesis] [14:18:49] [INFO] Running at 2,114.90 FPS (33.05 FPS per env, 64 envs).
+[Genesis] [14:18:49] [INFO] Running at 2,281.13 FPS (35.64 FPS per env, 64 envs).
+[Genesis] [14:18:49] [INFO] Running at 2,421.96 FPS (37.84 FPS per env, 64 envs).
+[Genesis] [14:18:49] [INFO] Running at 2,578.12 FPS (40.28 FPS per env, 64 envs).
+[Genesis] [14:18:49] [INFO] Running at 2,703.47 FPS (42.24 FPS per env, 64 envs).
+[Genesis] [14:18:49] [INFO] Running at 2,847.13 FPS (44.49 FPS per env, 64 envs).
+[Genesis] [14:18:49] [INFO] Running at 2,950.36 FPS (46.10 FPS per env, 64 envs).
+[Genesis] [14:18:49] [INFO] Running at 3,084.48 FPS (48.20 FPS per env, 64 envs).
+[Genesis] [14:18:49] [INFO] Running at 3,183.01 FPS (49.73 FPS per env, 64 envs).
+[Genesis] [14:18:49] [INFO] Running at 3,302.47 FPS (51.60 FPS per env, 64 envs).
+[Genesis] [14:18:49] [INFO] Running at 3,389.38 FPS (52.96 FPS per env, 64 envs).
+[Genesis] [14:18:50] [INFO] Running at 3,415.15 FPS (53.36 FPS per env, 64 envs).
+[Genesis] [14:18:50] [INFO] Running at 3,422.25 FPS (53.47 FPS per env, 64 envs).
+[Genesis] [14:18:50] [INFO] Running at 3,505.85 FPS (54.78 FPS per env, 64 envs).
+[Genesis] [14:18:50] [INFO] Running at 3,600.45 FPS (56.26 FPS per env, 64 envs).
+[Genesis] [14:18:50] [INFO] Running at 3,666.75 FPS (57.29 FPS per env, 64 envs).
+[Genesis] [14:18:50] [INFO] Running at 3,760.71 FPS (58.76 FPS per env, 64 envs).
+[Genesis] [14:18:50] [INFO] Running at 3,821.18 FPS (59.71 FPS per env, 64 envs).
+[Genesis] [14:18:50] [INFO] Running at 3,907.36 FPS (61.05 FPS per env, 64 envs).
+[Genesis] [14:18:50] [INFO] Running at 3,957.96 FPS (61.84 FPS per env, 64 envs).
+[Genesis] [14:18:50] [INFO] Running at 4,043.57 FPS (63.18 FPS per env, 64 envs).
+[Genesis] [14:18:50] [INFO] Running at 4,092.86 FPS (63.95 FPS per env, 64 envs).
+[Genesis] [14:18:50] [INFO] Running at 4,175.09 FPS (65.24 FPS per env, 64 envs).
+[Genesis] [14:18:50] [INFO] Running at 4,212.61 FPS (65.82 FPS per env, 64 envs).
+[Genesis] [14:18:50] [INFO] Running at 4,283.72 FPS (66.93 FPS per env, 64 envs).
+[Genesis] [14:18:50] [INFO] Running at 4,317.50 FPS (67.46 FPS per env, 64 envs).
+[Genesis] [14:18:50] [INFO] Running at 4,384.42 FPS (68.51 FPS per env, 64 envs).
+[Genesis] [14:18:50] [INFO] Running at 4,413.39 FPS (68.96 FPS per env, 64 envs).
+[Genesis] [14:18:50] [INFO] Running at 4,478.25 FPS (69.97 FPS per env, 64 envs).
+[Genesis] [14:18:50] [INFO] Running at 4,530.50 FPS (70.79 FPS per env, 64 envs).
+[Genesis] [14:18:51] [INFO] Running at 4,580.57 FPS (71.57 FPS per env, 64 envs).
+[Genesis] [14:18:51] [INFO] Running at 4,635.62 FPS (72.43 FPS per env, 64 envs).
+[Genesis] [14:18:51] [INFO] Running at 4,660.57 FPS (72.82 FPS per env, 64 envs).
+[Genesis] [14:18:51] [INFO] Running at 4,706.35 FPS (73.54 FPS per env, 64 envs).
+[Genesis] [14:18:51] [INFO] Running at 4,717.35 FPS (73.71 FPS per env, 64 envs).
+[Genesis] [14:18:51] [INFO] Running at 4,759.65 FPS (74.37 FPS per env, 64 envs).
+[Genesis] [14:18:51] [INFO] Running at 4,762.65 FPS (74.42 FPS per env, 64 envs).
+[Genesis] [14:18:51] [INFO] Running at 4,802.39 FPS (75.04 FPS per env, 64 envs).
+[Genesis] [14:18:51] [INFO] Running at 4,813.06 FPS (75.20 FPS per env, 64 envs).
+[Genesis] [14:18:51] [INFO] Running at 4,853.71 FPS (75.84 FPS per env, 64 envs).
+[Genesis] [14:18:51] [INFO] Running at 4,879.73 FPS (76.25 FPS per env, 64 envs).
+[Genesis] [14:18:51] [INFO] Running at 4,897.00 FPS (76.52 FPS per env, 64 envs).
+[Genesis] [14:18:51] [INFO] Running at 4,920.96 FPS (76.89 FPS per env, 64 envs).
+[Genesis] [14:18:51] [INFO] Running at 4,921.66 FPS (76.90 FPS per env, 64 envs).
+[Genesis] [14:18:51] [INFO] Running at 4,954.05 FPS (77.41 FPS per env, 64 envs).
+[Genesis] [14:18:51] [INFO] Running at 4,953.83 FPS (77.40 FPS per env, 64 envs).
+[Genesis] [14:18:51] [INFO] Running at 4,986.35 FPS (77.91 FPS per env, 64 envs).
+[Genesis] [14:18:51] [INFO] Running at 4,985.22 FPS (77.89 FPS per env, 64 envs).
+[Genesis] [14:18:52] [INFO] Running at 5,017.95 FPS (78.41 FPS per env, 64 envs).
+[Genesis] [14:18:52] [INFO] Running at 5,013.50 FPS (78.34 FPS per env, 64 envs).
+[Genesis] [14:18:52] [INFO] Running at 5,048.83 FPS (78.89 FPS per env, 64 envs).
+[Genesis] [14:18:52] [INFO] Running at 5,078.64 FPS (79.35 FPS per env, 64 envs).
+[Genesis] [14:18:52] [INFO] Running at 5,101.55 FPS (79.71 FPS per env, 64 envs).
+[Genesis] [14:18:52] [INFO] Running at 5,127.93 FPS (80.12 FPS per env, 64 envs).
+

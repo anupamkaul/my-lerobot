@@ -1,0 +1,49 @@
+{
+  "name": "libasprintf-devel",
+  "version": "0.25.1",
+  "build": "hae62183_2",
+  "build_number": 2,
+  "channel": "https://conda.anaconda.org/conda-forge/osx-arm64",
+  "subdir": "osx-arm64",
+  "fn": "libasprintf-devel-0.25.1-hae62183_2.conda",
+  "md5": "63b67bfd0038e4e4b56f4ffae33f2bcc",
+  "url": "https://conda.anaconda.org/conda-forge/osx-arm64/libasprintf-devel-0.25.1-hae62183_2.conda",
+  "sha256": "ef7015ab576a01b3c65591cc14daded4002c9f1138c4ca95f5a059baf181ba79",
+  "depends": [
+    "__osx >=11.0",
+    "libasprintf 0.25.1 hae62183_2"
+  ],
+  "constrains": [],
+  "license": "LGPL-2.1-or-later",
+  "timestamp": 1790118687000,
+  "size": 36411,
+  "_requested_specs": [],
+  "package_tarball_full_path": "/Users/anupamkaul/miniforge3/pkgs/libasprintf-devel-0.25.1-hae62183_2.conda",
+  "extracted_package_dir": "/Users/anupamkaul/miniforge3/pkgs/libasprintf-devel-0.25.1-hae62183_2",
+  "files": [
+    "include/autosprintf.h",
+    "lib/libasprintf.dylib"
+  ],
+  "paths_data": {
+    "paths_version": 1,
+    "paths": [
+      {
+        "_path": "include/autosprintf.h",
+        "path_type": "hardlink",
+        "sha256": "b63993786da0e9435ee611e08bfc12800e32f47c9820f7be42cb75687d7ee541",
+        "size_in_bytes": 2421,
+        "sha256_in_prefix": "b63993786da0e9435ee611e08bfc12800e32f47c9820f7be42cb75687d7ee541"
+      },
+      {
+        "_path": "lib/libasprintf.dylib",
+        "path_type": "softlink",
+        "sha256": "c894dd0a52a5e4493d93dccfe43e9e39576304b38be0fcf41f826a314600a6b0",
+        "size_in_bytes": 140528
+      }
+    ]
+  },
+  "link": {
+    "source": "/Users/anupamkaul/miniforge3/pkgs/libasprintf-devel-0.25.1-hae62183_2",
+    "type": 1
+  }
+}

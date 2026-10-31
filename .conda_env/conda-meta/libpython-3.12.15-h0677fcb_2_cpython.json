@@ -1,0 +1,53 @@
+{
+  "name": "libpython",
+  "version": "3.12.15",
+  "build": "h0677fcb_2_cpython",
+  "build_number": 2,
+  "channel": "https://conda.anaconda.org/conda-forge/osx-arm64",
+  "subdir": "osx-arm64",
+  "fn": "libpython-3.12.15-h0677fcb_2_cpython.conda",
+  "md5": "5b4755b2167934518adc19214267bc8d",
+  "url": "https://conda.anaconda.org/conda-forge/osx-arm64/libpython-3.12.15-h0677fcb_2_cpython.conda",
+  "sha256": "b21efc2d2582aa1b84b96eab48229ed452b22db638960f4b5b8ebf4a50b28be4",
+  "depends": [
+    "__osx >=11.0"
+  ],
+  "constrains": [],
+  "license": "Python-2.0",
+  "timestamp": 1791910410000,
+  "size": 1741357,
+  "_requested_specs": [],
+  "package_tarball_full_path": "/Users/anupamkaul/miniforge3/pkgs/libpython-3.12.15-h0677fcb_2_cpython.conda",
+  "extracted_package_dir": "/Users/anupamkaul/miniforge3/pkgs/libpython-3.12.15-h0677fcb_2_cpython",
+  "files": [
+    "lib/libpython3.12.dylib",
+    "lib/libpython3.dylib"
+  ],
+  "paths_data": {
+    "paths_version": 1,
+    "paths": [
+      {
+        "_path": "lib/libpython3.12.dylib",
+        "prefix_placeholder": "/Users/runner/miniforge3/conda-bld/python-split_1791909693091/_h_env_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placeh",
+        "file_mode": "binary",
+        "path_type": "hardlink",
+        "sha256": "91559e978d63a29e69563cb0ac106ea13cff0e95440a0aa66116a4a5a8bd08ec",
+        "size_in_bytes": 6852688,
+        "sha256_in_prefix": "385a5c335f01f8c21a0fc2e205ae50256d841b0c2e2f77857e6d7958fddbcb51"
+      },
+      {
+        "_path": "lib/libpython3.dylib",
+        "prefix_placeholder": "/Users/runner/miniforge3/conda-bld/python-split_1791909693091/_h_env_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placeh",
+        "file_mode": "binary",
+        "path_type": "hardlink",
+        "sha256": "45adbccd922374b6990e7e24a71b618e4d465609cddd455a6ab2c81a5368eb69",
+        "size_in_bytes": 78544,
+        "sha256_in_prefix": "ff9dbafd6e3c4d6b015c551ecaf47ad2fee95cc6595d88aee95453f3e91dce34"
+      }
+    ]
+  },
+  "link": {
+    "source": "/Users/anupamkaul/miniforge3/pkgs/libpython-3.12.15-h0677fcb_2_cpython",
+    "type": 1
+  }
+}

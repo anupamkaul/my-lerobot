@@ -1,0 +1,81 @@
+lerobot % python test_rl1.py 
+[Genesis] [14:08:54] [INFO] ╭─────────────────────────────────────────────────────────────────────────────────────╮
+[Genesis] [14:08:54] [INFO] │┈┉┈┉┈┉┈┉┈┉┈┉┈┉┈┉┈┉┈┉┈┉┈┉┈┉┈┉┈┉┈┉┈┉┈┉┈┉ Genesis ┈┉┈┉┈┉┈┉┈┉┈┉┈┉┈┉┈┉┈┉┈┉┈┉┈┉┈┉┈┉┈┉┈┉┈┉┈┉│
+[Genesis] [14:08:54] [INFO] ╰─────────────────────────────────────────────────────────────────────────────────────╯
+[Genesis] [14:08:54] [INFO] Running on [Apple M5 Max] with backend gs.metal. Device memory: 128.00 GB.
+[Genesis] [14:08:54] [INFO] 🚀 Genesis initialized. 🔖 version: 1.4.5, 🎨 theme: dark, 🌱 seed: None, 🐛 debug: False, 📏 precision: 32, 🔥 performance: False, 💬 verbose: INFO
+[Genesis] [14:08:54] [WARNING] Interactive viewer running in main thread. It will only be responsive if a simulation is running.
+[Genesis] [14:08:54] [INFO] Scene <2f9908c> created.
+/Users/anupamkaul/other_git/hugging-face/lerobot/.conda_env/lib/python3.12/site-packages/genesis/utils/geom.py:1476: RuntimeWarning: divide by zero encountered in matmul
+  new_pos = np.matmul(R, pos_.swapaxes(1, 2)).swapaxes(1, 2)
+/Users/anupamkaul/other_git/hugging-face/lerobot/.conda_env/lib/python3.12/site-packages/genesis/utils/geom.py:1476: RuntimeWarning: overflow encountered in matmul
+  new_pos = np.matmul(R, pos_.swapaxes(1, 2)).swapaxes(1, 2)
+/Users/anupamkaul/other_git/hugging-face/lerobot/.conda_env/lib/python3.12/site-packages/genesis/utils/geom.py:1476: RuntimeWarning: invalid value encountered in matmul
+  new_pos = np.matmul(R, pos_.swapaxes(1, 2)).swapaxes(1, 2)
+[Genesis] [14:08:54] [INFO] Adding <gs.engine.entities.RigidEntity> plane_b5d6a1c. idx: 0, morph: <gs.morphs.Plane>, material: <gs.materials.Rigid>.
+[Genesis] [14:08:55] [INFO] Adding <gs.engine.entities.RigidEntity> go2_description_d674a12. idx: 1, morph: <gs.morphs.URDF(file='/Users/anupamkaul/other_git/hugging-face/lerobot/.conda_env/lib/python3.12/site-packages/genesis/assets/urdf/go2/urdf/go2.urdf')>, material: <gs.materials.Rigid>.
+[Genesis] [14:08:55] [INFO] Building scene <2f9908c>...
+[Genesis] [14:08:57] [WARNING] Neutral robot position (qpos0) exceeds joint limits.
+[Genesis] [14:08:58] [INFO] Preprocessing SDF of mesh /Users/anupamkaul/.cache/genesis/gsd/8cbc02a5495422b0a04c5788f481a179a6685ad0aaf2a83ee06215fa29523f05.gsd.
+[Genesis] [14:08:58] [INFO] Preprocessing SDF of mesh /Users/anupamkaul/.cache/genesis/gsd/2e0f229e210da8bb1b3dbfd9b6f56fba9962c521814b7ce4bc88802e1dbc8577.gsd.
+[Genesis] [14:08:58] [INFO] Preprocessing SDF of mesh /Users/anupamkaul/.cache/genesis/gsd/6971afa3a0a6e433f9d1da0f78f22636e0fbca166b9d0dc8da7111ae6b6833d9.gsd.
+[Genesis] [14:08:58] [INFO] Preprocessing SDF of mesh /Users/anupamkaul/.cache/genesis/gsd/19e632726e190a438306ff00f127b827689e5e3d18321a72ad35e3f1c9bec89f.gsd.
+[Genesis] [14:08:58] [INFO] Preprocessing SDF of mesh /Users/anupamkaul/.cache/genesis/gsd/72030c291476071c0341234495dcdc6f56315e2bc5c567a5dda06fa996c12dea.gsd.
+[Genesis] [14:08:58] [INFO] Preprocessing SDF of mesh /Users/anupamkaul/.cache/genesis/gsd/4f3ff58bd60836f034c8f56d22291d8c6a863874f014c7d786d0d45ea904ee44.gsd.
+[Genesis] [14:08:58] [INFO] Preprocessing SDF of mesh /Users/anupamkaul/.cache/genesis/gsd/d6ce5c6d8a1d9f63bfbccc9d7b879035aee9b2a3a14e6eb34445cddb7bcd2f2c.gsd.
+[Genesis] [14:08:58] [INFO] Preprocessing SDF of mesh /Users/anupamkaul/.cache/genesis/gsd/130260b2145b8bc8132b02195e63d8524795ef0e4a06403efa3d9b7a407899e5.gsd.
+[Genesis] [14:08:58] [INFO] Preprocessing SDF of mesh /Users/anupamkaul/.cache/genesis/gsd/c4cbaabeae89214df4fab3b1b5b8bef64ffa3106dc18bcf3aba029c303fae177.gsd.
+[Genesis] [14:08:58] [INFO] Preprocessing SDF of mesh /Users/anupamkaul/.cache/genesis/gsd/62c03bf9df81c2175a1721977ebbf86a394473edf14f1a0743643e8e815e80b3.gsd.
+[Genesis] [14:08:58] [INFO] Preprocessing SDF of mesh /Users/anupamkaul/.cache/genesis/gsd/37a83e372d12ad2799080c88d415c7ad5627d12ba50145fe892bfc44c6dcd2d6.gsd.
+/Users/anupamkaul/other_git/hugging-face/lerobot/.conda_env/lib/python3.12/site-packages/genesis/engine/mesh.py:972: RuntimeWarning: divide by zero encountered in matmul
+  [hull_vid[np.argmax(nodes_chunk @ verts[hull_vid].T, axis=-1)] for nodes_chunk in nodes_chunks]
+/Users/anupamkaul/other_git/hugging-face/lerobot/.conda_env/lib/python3.12/site-packages/genesis/engine/mesh.py:972: RuntimeWarning: overflow encountered in matmul
+  [hull_vid[np.argmax(nodes_chunk @ verts[hull_vid].T, axis=-1)] for nodes_chunk in nodes_chunks]
+/Users/anupamkaul/other_git/hugging-face/lerobot/.conda_env/lib/python3.12/site-packages/genesis/engine/mesh.py:972: RuntimeWarning: invalid value encountered in matmul
+  [hull_vid[np.argmax(nodes_chunk @ verts[hull_vid].T, axis=-1)] for nodes_chunk in nodes_chunks]
+/Users/anupamkaul/other_git/hugging-face/lerobot/.conda_env/lib/python3.12/site-packages/genesis/engine/mesh.py:999: RuntimeWarning: divide by zero encountered in matmul
+  np.arctan2(-arcs_start_chart @ meridians_normal.T, arcs_orthogonal_chart @ meridians_normal.T),
+/Users/anupamkaul/other_git/hugging-face/lerobot/.conda_env/lib/python3.12/site-packages/genesis/engine/mesh.py:999: RuntimeWarning: overflow encountered in matmul
+  np.arctan2(-arcs_start_chart @ meridians_normal.T, arcs_orthogonal_chart @ meridians_normal.T),
+/Users/anupamkaul/other_git/hugging-face/lerobot/.conda_env/lib/python3.12/site-packages/genesis/engine/mesh.py:999: RuntimeWarning: invalid value encountered in matmul
+  np.arctan2(-arcs_start_chart @ meridians_normal.T, arcs_orthogonal_chart @ meridians_normal.T),
+/Users/anupamkaul/other_git/hugging-face/lerobot/.conda_env/lib/python3.12/site-packages/genesis/engine/mesh.py:1041: RuntimeWarning: divide by zero encountered in matmul
+  directions_chart = directions @ CHARTS_ROT[i_chart].T
+/Users/anupamkaul/other_git/hugging-face/lerobot/.conda_env/lib/python3.12/site-packages/genesis/engine/mesh.py:1041: RuntimeWarning: overflow encountered in matmul
+  directions_chart = directions @ CHARTS_ROT[i_chart].T
+/Users/anupamkaul/other_git/hugging-face/lerobot/.conda_env/lib/python3.12/site-packages/genesis/engine/mesh.py:1041: RuntimeWarning: invalid value encountered in matmul
+  directions_chart = directions @ CHARTS_ROT[i_chart].T
+[Genesis] [14:09:01] [INFO] Compiling simulation kernels...
+[W 10/25/26 14:09:15.820 14301560] QuadrantsWarning
+While compiling `func_solve_init_c694_0`, File "/Users/anupamkaul/other_git/hugging-face/lerobot/.conda_env/lib/python3.12/site-packages/genesis/engine/solvers/rigid/constraint/linesearch.py", line 1596, in func_exit_islands_coop:
+            is_active = constraint_state.island.improved[i_island, i_b]
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Assign may lose precision: u1 <- i32
+/Users/anupamkaul/other_git/hugging-face/lerobot/.conda_env/lib/python3.12/site-packages/quadrants/lang/ast/ast_transformers/function_def_transformer.py:781: DeprecationWarning: ast.Str is deprecated and will be removed in Python 3.14; use ast.Constant instead
+  return index == 0 and isinstance(stmt, ast.Expr) and isinstance(stmt.value, (ast.Constant, ast.Str))
+[W 10/25/26 14:09:22.201 14301560] QuadrantsWarning
+While compiling `_kernel_solve_graph_c700_0`, File "/Users/anupamkaul/other_git/hugging-face/lerobot/.conda_env/lib/python3.12/site-packages/genesis/engine/solvers/rigid/constraint/linesearch.py", line 1258, in func_linesearch_islands_coop:
+            is_active = constraint_state.island.improved[i_island, i_b]
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Assign may lose precision: u1 <- i32
+[W 10/25/26 14:09:22.201 14301560] QuadrantsWarning
+While compiling `_kernel_solve_graph_c700_0`, File "/Users/anupamkaul/other_git/hugging-face/lerobot/.conda_env/lib/python3.12/site-packages/genesis/engine/solvers/rigid/constraint/solver_breakdown.py", line 147, in _func_update_qfrc_constraint_per_dof:
+                is_island_moving = constraint_state.island.improved[i_island,
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Assign may lose precision: u1 <- i32
+[W 10/25/26 14:09:22.203 14301560] QuadrantsWarning
+While compiling `_kernel_solve_graph_c700_0`, File "/Users/anupamkaul/other_git/hugging-face/lerobot/.conda_env/lib/python3.12/site-packages/genesis/engine/solvers/rigid/constraint/linesearch.py", line 1596, in func_exit_islands_coop:
+            is_active = constraint_state.island.improved[i_island, i_b]
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Assign may lose precision: u1 <- i32
+[Genesis] [14:09:30] [INFO] Building visualizer...
+[Genesis] [14:09:38] [INFO] Viewer created. Resolution: 1489×1117, refresh_rate: 60, dt: 0.01s, realtime_factor: 1.0 (real-time target: 100.0 FPS).
+🚀 64 Parallel Robot Dog Environments Initialized Successfully on M5 Max GPU Backend!
+Traceback (most recent call last):
+  File "/Users/anupamkaul/other_git/hugging-face/lerobot/test_rl1.py", line 42, in <module>
+    actions = torch.zeros((num_envs, robot_dog.num_joints), device='mps')
+                                     ^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'RigidEntity' object has no attribute 'num_joints'. Did you mean: 'n_joints'?
+
+[Genesis] [14:09:39] [ERROR] AttributeError: 'RigidEntity' object has no attribute 'num_joints'
+[Genesis] [14:09:39] [INFO] 💤 Exiting Genesis and caching compiled kernels...

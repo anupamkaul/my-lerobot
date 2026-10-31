@@ -1,0 +1,70 @@
+(base) anupamkaul@anupamkauls-MacBook-Pro lerobot % conda create --prefix ./.conda_env python=3.10 -y
+Retrieving notices: done
+Channels:
+ - conda-forge
+Platform: osx-arm64
+Collecting package metadata (repodata.json): done
+Solving environment: done
+
+## Package Plan ##
+
+  environment location: /Users/anupamkaul/other_git/hugging-face/lerobot/.conda_env
+
+  added / updated specs:
+    - python=3.10
+
+
+The following packages will be downloaded:
+
+    package                    |            build
+    ---------------------------|-----------------
+    ca-certificates-2026.10.23 |       hbd8a1cb_0         127 KB  conda-forge
+    libsqlite-3.54.1           |     h34a968b_100         927 KB  conda-forge
+    pip-26.2.1                 |     pyh8b19718_0         1.1 MB  conda-forge
+    python-3.10.22             |hac0b6dc_0_cpython        12.3 MB  conda-forge
+    setuptools-84.0.0          |     pyh332efcf_0         512 KB  conda-forge
+    tzdata-2026e               |       h5d301ff_0         116 KB  conda-forge
+    wheel-0.48.0               |     pyhd8ed1ab_0          34 KB  conda-forge
+    ------------------------------------------------------------
+                                           Total:        15.1 MB
+
+The following NEW packages will be INSTALLED:
+
+  bzip2              conda-forge/osx-arm64::bzip2-1.0.8-h4e30115_10 
+  ca-certificates    conda-forge/noarch::ca-certificates-2026.10.23-hbd8a1cb_0 
+  libexpat           conda-forge/osx-arm64::libexpat-2.8.5-h6111c0a_0 
+  libffi             conda-forge/osx-arm64::libffi-3.7.0-h47dc5ef_1 
+  liblzma            conda-forge/osx-arm64::liblzma-5.8.3-h8088a28_1 
+  libsqlite          conda-forge/osx-arm64::libsqlite-3.54.1-h34a968b_100 
+  libzlib            conda-forge/osx-arm64::libzlib-1.3.2-h8088a28_3 
+  ncurses            conda-forge/osx-arm64::ncurses-6.6-he64c551_1 
+  openssl            conda-forge/osx-arm64::openssl-3.6.5-h55eecbc_0 
+  packaging          conda-forge/noarch::packaging-26.3-pyhc364b38_0 
+  pip                conda-forge/noarch::pip-26.2.1-pyh8b19718_0 
+  python             conda-forge/osx-arm64::python-3.10.22-hac0b6dc_0_cpython 
+  readline           conda-forge/osx-arm64::readline-8.3-h8b90a29_1 
+  setuptools         conda-forge/noarch::setuptools-84.0.0-pyh332efcf_0 
+  tk                 conda-forge/osx-arm64::tk-8.6.13-hbeba79b_4 
+  tzdata             conda-forge/noarch::tzdata-2026e-h5d301ff_0 
+  wheel              conda-forge/noarch::wheel-0.48.0-pyhd8ed1ab_0 
+
+
+
+Downloading and Extracting Packages:
+                                                                                                                                    
+Preparing transaction: done                                                                                                         
+Verifying transaction: done                                                                                                         
+Executing transaction: - WARNING conda.conda_pypi.main:notify_conda_pypi_tip(158):                                                  
+  Did you know? You can install many PyPI packages with conda                                                                       
+  using conda-pypi. Get started:                                                                                                    
+    https://bit.ly/4xXYt0B                                                                                                          
+
+done
+#
+# To activate this environment, use
+#
+#     $ conda activate /Users/anupamkaul/other_git/hugging-face/lerobot/.conda_env
+#
+# To deactivate an active environment, use
+#
+#     $ conda deactivate

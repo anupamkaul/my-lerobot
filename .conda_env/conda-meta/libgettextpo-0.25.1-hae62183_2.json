@@ -1,0 +1,43 @@
+{
+  "name": "libgettextpo",
+  "version": "0.25.1",
+  "build": "hae62183_2",
+  "build_number": 2,
+  "channel": "https://conda.anaconda.org/conda-forge/osx-arm64",
+  "subdir": "osx-arm64",
+  "fn": "libgettextpo-0.25.1-hae62183_2.conda",
+  "md5": "93e3f213a8e3fa21fb7b1407d6a4cd44",
+  "url": "https://conda.anaconda.org/conda-forge/osx-arm64/libgettextpo-0.25.1-hae62183_2.conda",
+  "sha256": "ea81b8992214e8c4cd289ba4b9092004aa941ddb12900a32cfbc28be6d3156ff",
+  "depends": [
+    "__osx >=11.0",
+    "libiconv >=1.18,<2.0a0",
+    "libintl 0.25.1 hae62183_2"
+  ],
+  "constrains": [],
+  "license": "GPL-3.0-or-later",
+  "timestamp": 1790118703000,
+  "size": 182332,
+  "_requested_specs": [],
+  "package_tarball_full_path": "/Users/anupamkaul/miniforge3/pkgs/libgettextpo-0.25.1-hae62183_2.conda",
+  "extracted_package_dir": "/Users/anupamkaul/miniforge3/pkgs/libgettextpo-0.25.1-hae62183_2",
+  "files": [
+    "lib/libgettextpo.0.dylib"
+  ],
+  "paths_data": {
+    "paths_version": 1,
+    "paths": [
+      {
+        "_path": "lib/libgettextpo.0.dylib",
+        "path_type": "hardlink",
+        "sha256": "7de0f464dcf9d818cb86a4d38c4ac645d47902b25cdb8793b91d94f0a469b13a",
+        "size_in_bytes": 507056,
+        "sha256_in_prefix": "7de0f464dcf9d818cb86a4d38c4ac645d47902b25cdb8793b91d94f0a469b13a"
+      }
+    ]
+  },
+  "link": {
+    "source": "/Users/anupamkaul/miniforge3/pkgs/libgettextpo-0.25.1-hae62183_2",
+    "type": 1
+  }
+}

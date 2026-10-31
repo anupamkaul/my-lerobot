@@ -1,0 +1,130 @@
+To run PyTorch natively with GPU acceleration (Metal / MPS backend) on your MacBook Pro M5 Pro, you do not need a special custom build. Modern versions of PyTorch natively support Apple Silicon GPUs.
+
+Note: For training "massive" LLMs locally on Apple Silicon, Apple’s native MLX framework is heavily recommended as it is optimized precisely for this. However, if your codebase requires PyTorch, here are the exact steps to install the working version.
+
+
+Step 1: Install Xcode Command Line Tools
+
+PyTorch requires Apple's command-line compilation tools to leverage the Metal framework. Open your terminal and run:
+bash
+xcode-select --install
+Use code with caution.
+(If it is already installed, your terminal will inform you).
+
+Step 2: Set up a Native Apple Silicon Environment
+
+To prevent architecture conflicts, you must use a native arm64 (Apple Silicon) environment. Using Miniconda or venv with a native Python installation (Python 3.10 to 3.12) is recommended.
+If you are using Python's built-in virtual environment, run:
+bash
+python3 -m venv pytorch_env
+source pytorch_env/bin/activate
+pip install --upgrade pip
+Use code with caution.
+
+Step 3: Install PyTorch
+
+Run the standard installation command. The latest stable release of PyTorch automatically detects and installs the necessary binaries for Apple Silicon GPUs:
+bash
+pip3 install torch torchvision torchaudio
+Use code with caution.
+
+Step 4: Verify Metal (MPS) Acceleration
+
+To verify that PyTorch is using your M5 Pro's GPU instead of the CPU, launch a Python terminal and run the following verification script:
+python
+import torch
+
+# Check if Metal Performance Shaders (MPS) is available
+if torch.backends.mps.is_available():
+    mps_device = torch.device("mps")
+    x = torch.ones(1, device=mps_device)
+    print("Success! Sub-tensor initialized on GPU:", x)
+else:
+    print("MPS device not found. Check your environment.")
+Use code with caution.
+If it prints device='mps:0', PyTorch has successfully bound to your M5 Pro's hardware acceleration. When writing your LLM training scripts, ensure you explicitly direct your models and tensors to the GPU by using .to("mps") instead of .to("cuda").
+Are you planning to train your LLM completely from scratch, or are you fine-tuning an existing open-source model using frameworks like Hugging Face / LoRA?
+
+---------------- actual instructions -------------------------------------------
+
+anupamkaul@anupamkauls-MacBook-Pro demosthenes-llm % python3 -m venv dllm_env       
+
+anupamkaul@anupamkauls-MacBook-Pro demosthenes-llm % source dllm_env/bin/activate
+
+(dllm_env) anupamkaul@anupamkauls-MacBook-Pro demosthenes-llm % vi check_mac.notes 
+(dllm_env) anupamkaul@anupamkauls-MacBook-Pro demosthenes-llm % which pip3
+/Users/anupamkaul/akaul_git/demosthenes-llm/dllm_env/bin/pip3
+(dllm_env) anupamkaul@anupamkauls-MacBook-Pro demosthenes-llm % which python3
+/Users/anupamkaul/akaul_git/demosthenes-llm/dllm_env/bin/python3
+
+(dllm_env) anupamkaul@anupamkauls-MacBook-Pro demosthenes-llm % pip3 install --upgrade pip
+Requirement already satisfied: pip in ./dllm_env/lib/python3.14/site-packages (26.2.1)
+
+(dllm_env) anupamkaul@anupamkauls-MacBook-Pro demosthenes-llm % pip3 install torch torchvision torchaudio
+Collecting torch
+  Downloading torch-2.14.1-cp314-cp314-macosx_14_0_arm64.whl.metadata (39 kB)
+Collecting torchvision
+  Downloading torchvision-0.29.1-cp314-cp314-macosx_14_0_arm64.whl.metadata (5.7 kB)
+Collecting torchaudio
+  Downloading torchaudio-2.11.0-cp314-cp314-macosx_12_0_arm64.whl.metadata (6.9 kB)
+Collecting filelock (from torch)
+  Downloading filelock-4.1.1-py3-none-any.whl.metadata (2.0 kB)
+Collecting typing-extensions>=4.10.0 (from torch)
+  Using cached typing_extensions-4.16.0-py3-none-any.whl.metadata (3.3 kB)
+Collecting setuptools>=77.0.3 (from torch)
+  Using cached setuptools-84.0.0-py3-none-any.whl.metadata (6.6 kB)
+Collecting sympy>=1.13.3 (from torch)
+  Using cached sympy-1.14.0-py3-none-any.whl.metadata (12 kB)
+Collecting networkx>=2.5.1 (from torch)
+  Downloading networkx-3.7-py3-none-any.whl.metadata (6.7 kB)
+Collecting jinja2 (from torch)
+  Using cached jinja2-3.1.6-py3-none-any.whl.metadata (2.9 kB)
+Collecting fsspec>=0.8.5 (from torch)
+  Downloading fsspec-2026.9.0-py3-none-any.whl.metadata (10 kB)
+Collecting numpy (from torchvision)
+  Downloading numpy-2.5.4-cp314-cp314-macosx_14_0_arm64.whl.metadata (6.6 kB)
+Collecting pillow!=8.3.*,>=5.3.0 (from torchvision)
+  Using cached pillow-12.3.0-cp314-cp314-macosx_11_0_arm64.whl.metadata (9.1 kB)
+Collecting mpmath<1.4,>=1.1.0 (from sympy>=1.13.3->torch)
+  Using cached mpmath-1.3.0-py3-none-any.whl.metadata (8.6 kB)
+Collecting MarkupSafe>=2.0 (from jinja2->torch)
+  Downloading markupsafe-3.0.4-cp314-cp314-macosx_11_0_arm64.whl.metadata (2.7 kB)
+Downloading torch-2.14.1-cp314-cp314-macosx_14_0_arm64.whl (127.3 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 127.3/127.3 MB 45.0 MB/s  0:00:02
+Downloading torchvision-0.29.1-cp314-cp314-macosx_14_0_arm64.whl (1.8 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1.8/1.8 MB 36.8 MB/s  0:00:00
+Downloading torchaudio-2.11.0-cp314-cp314-macosx_12_0_arm64.whl (679 kB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 679.9/679.9 kB 25.7 MB/s  0:00:00
+Downloading fsspec-2026.9.0-py3-none-any.whl (221 kB)
+Downloading networkx-3.7-py3-none-any.whl (2.1 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 2.1/2.1 MB 35.5 MB/s  0:00:00
+Using cached pillow-12.3.0-cp314-cp314-macosx_11_0_arm64.whl (4.8 MB)
+Using cached setuptools-84.0.0-py3-none-any.whl (818 kB)
+Using cached sympy-1.14.0-py3-none-any.whl (6.3 MB)
+Using cached mpmath-1.3.0-py3-none-any.whl (536 kB)
+Using cached typing_extensions-4.16.0-py3-none-any.whl (45 kB)
+Downloading filelock-4.1.1-py3-none-any.whl (132 kB)
+Using cached jinja2-3.1.6-py3-none-any.whl (134 kB)
+Downloading markupsafe-3.0.4-cp314-cp314-macosx_11_0_arm64.whl (12 kB)
+Downloading numpy-2.5.4-cp314-cp314-macosx_14_0_arm64.whl (5.5 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 5.5/5.5 MB 41.2 MB/s  0:00:00
+Installing collected packages: torchaudio, mpmath, typing-extensions, sympy, setuptools, pillow, numpy, networkx, MarkupSafe, fsspec, filelock, jinja2, torch, torchvision
+Successfully installed MarkupSafe-3.0.4 filelock-4.1.1 fsspec-2026.9.0 jinja2-3.1.6 mpmath-1.3.0 networkx-3.7 numpy-2.5.4 pillow-12.3.0 setuptools-84.0.0 sympy-1.14.0 torch-2.14.1 torchaudio-2.11.0 torchvision-0.29.1 typing-extensions-4.16.0
+
+et voila ! (local installations are the best)
+
+pip3 show torch
+Name: torch
+Version: 2.14.1
+Summary: Tensors and Dynamic neural networks in Python with strong GPU acceleration
+Home-page: https://pytorch.org
+Author: 
+Author-email: PyTorch Team <packages@pytorch.org>
+License-Expression: Apache-2.0 AND Apache-2.0 WITH LLVM-exception AND BSD-2-Clause AND BSD-3-Clause AND BSL-1.0 AND MIT
+Location: /Users/anupamkaul/akaul_git/demosthenes-llm/dllm_env/lib/python3.14/site-packages
+Requires: filelock, fsspec, jinja2, networkx, setuptools, sympy, typing-extensions
+Required-by: torchvision
+
+# execute on mac
+python3 mac-torch.py 
+Success! Sub-tensor initialized on GPU: tensor([1.], device='mps:0')

@@ -1,0 +1,121 @@
+{
+  "name": "openh264",
+  "version": "2.3.0",
+  "build": "h9a09cb3_0",
+  "build_number": 0,
+  "channel": "https://conda.anaconda.org/conda-forge/osx-arm64",
+  "subdir": "osx-arm64",
+  "fn": "openh264-2.3.0-h9a09cb3_0.tar.bz2",
+  "md5": "79061c9dc6b76cca3383b5d60916b33a",
+  "url": "https://conda.anaconda.org/conda-forge/osx-arm64/openh264-2.3.0-h9a09cb3_0.tar.bz2",
+  "sha256": "917efab31dcda6503bab7d873c8c4f4dbbcc489947eaad1513ec3fc03ccfd179",
+  "depends": [
+    "libcxx >=13.0.1"
+  ],
+  "constrains": [],
+  "license": "BSD-2-Clause",
+  "timestamp": 1659334064000,
+  "size": 1350031,
+  "_requested_specs": [],
+  "package_tarball_full_path": "/Users/anupamkaul/miniforge3/pkgs/openh264-2.3.0-h9a09cb3_0.tar.bz2",
+  "extracted_package_dir": "/Users/anupamkaul/miniforge3/pkgs/openh264-2.3.0-h9a09cb3_0",
+  "files": [
+    "bin/h264dec",
+    "bin/h264enc",
+    "include/wels/codec_api.h",
+    "include/wels/codec_app_def.h",
+    "include/wels/codec_def.h",
+    "include/wels/codec_ver.h",
+    "lib/libopenh264.2.3.0.dylib",
+    "lib/libopenh264.6.dylib",
+    "lib/libopenh264.a",
+    "lib/libopenh264.dylib",
+    "lib/pkgconfig/openh264.pc"
+  ],
+  "paths_data": {
+    "paths_version": 1,
+    "paths": [
+      {
+        "_path": "bin/h264dec",
+        "path_type": "hardlink",
+        "sha256": "be750c3446219272a0d2eeaef37be7d71dce939ff4fef6badcd5498ab1ac6b18",
+        "size_in_bytes": 500992,
+        "sha256_in_prefix": "be750c3446219272a0d2eeaef37be7d71dce939ff4fef6badcd5498ab1ac6b18"
+      },
+      {
+        "_path": "bin/h264enc",
+        "path_type": "hardlink",
+        "sha256": "c71f01ecc4d767bca377b53b6ce0fcc711fa8c66d2a478356df8ea549d6a3f60",
+        "size_in_bytes": 726432,
+        "sha256_in_prefix": "c71f01ecc4d767bca377b53b6ce0fcc711fa8c66d2a478356df8ea549d6a3f60"
+      },
+      {
+        "_path": "include/wels/codec_api.h",
+        "path_type": "hardlink",
+        "sha256": "21f29b20c24f7c7946f2e243d0bc2532fb3542f6c28af338209477e70d9036c9",
+        "size_in_bytes": 21178,
+        "sha256_in_prefix": "21f29b20c24f7c7946f2e243d0bc2532fb3542f6c28af338209477e70d9036c9"
+      },
+      {
+        "_path": "include/wels/codec_app_def.h",
+        "path_type": "hardlink",
+        "sha256": "ffd9561a96b4290daddce67b23f1d4839568bfe73531f0309215ab64bb7f5580",
+        "size_in_bytes": 32852,
+        "sha256_in_prefix": "ffd9561a96b4290daddce67b23f1d4839568bfe73531f0309215ab64bb7f5580"
+      },
+      {
+        "_path": "include/wels/codec_def.h",
+        "path_type": "hardlink",
+        "sha256": "f974d269b5935e8dc7265b8bfc02f60e5185b4d6165d30541d2758a4506f1979",
+        "size_in_bytes": 7630,
+        "sha256_in_prefix": "f974d269b5935e8dc7265b8bfc02f60e5185b4d6165d30541d2758a4506f1979"
+      },
+      {
+        "_path": "include/wels/codec_ver.h",
+        "path_type": "hardlink",
+        "sha256": "8684486fc8fe79c214d66c57a49b8ad7089744f487f249a60b973e2ec63f9d86",
+        "size_in_bytes": 420,
+        "sha256_in_prefix": "8684486fc8fe79c214d66c57a49b8ad7089744f487f249a60b973e2ec63f9d86"
+      },
+      {
+        "_path": "lib/libopenh264.2.3.0.dylib",
+        "path_type": "hardlink",
+        "sha256": "d4806ee1b209f77c7d622244c3d7fcf0c7f4d95c4cea287453911ffb12c2dd75",
+        "size_in_bytes": 1043568,
+        "sha256_in_prefix": "d4806ee1b209f77c7d622244c3d7fcf0c7f4d95c4cea287453911ffb12c2dd75"
+      },
+      {
+        "_path": "lib/libopenh264.6.dylib",
+        "path_type": "softlink",
+        "sha256": "d4806ee1b209f77c7d622244c3d7fcf0c7f4d95c4cea287453911ffb12c2dd75",
+        "size_in_bytes": 1043568
+      },
+      {
+        "_path": "lib/libopenh264.a",
+        "path_type": "hardlink",
+        "sha256": "919b4fde556ae019ebac9f52074e8fb6ba042fdc4830ab23aac4fdb52b0e8874",
+        "size_in_bytes": 1367008,
+        "sha256_in_prefix": "919b4fde556ae019ebac9f52074e8fb6ba042fdc4830ab23aac4fdb52b0e8874"
+      },
+      {
+        "_path": "lib/libopenh264.dylib",
+        "path_type": "softlink",
+        "sha256": "d4806ee1b209f77c7d622244c3d7fcf0c7f4d95c4cea287453911ffb12c2dd75",
+        "size_in_bytes": 1043568
+      },
+      {
+        "_path": "lib/pkgconfig/openh264.pc",
+        "prefix_placeholder": "/Users/runner/miniforge3/conda-bld/openh264_1659333827920/_h_env_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_",
+        "file_mode": "text",
+        "path_type": "hardlink",
+        "sha256": "b2b879d41d17253ac14cea1fd42d34cf7b8838640e5e8342f18a3efeb3b24d96",
+        "size_in_bytes": 817,
+        "sha256_in_prefix": "6dc9ac25bb3129f78aacb60714aa35f4b2c7390fbdd72807e7f723ecb609c752"
+      }
+    ]
+  },
+  "link": {
+    "source": "/Users/anupamkaul/miniforge3/pkgs/openh264-2.3.0-h9a09cb3_0",
+    "type": 1
+  }
+}

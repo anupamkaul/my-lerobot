@@ -1,0 +1,51 @@
+{
+  "name": "libgettextpo-devel",
+  "version": "0.25.1",
+  "build": "hae62183_2",
+  "build_number": 2,
+  "channel": "https://conda.anaconda.org/conda-forge/osx-arm64",
+  "subdir": "osx-arm64",
+  "fn": "libgettextpo-devel-0.25.1-hae62183_2.conda",
+  "md5": "6d00a561ccbafb83af7668ca061b253c",
+  "url": "https://conda.anaconda.org/conda-forge/osx-arm64/libgettextpo-devel-0.25.1-hae62183_2.conda",
+  "sha256": "ade9ccfd1f85c5b207cdedcdd8f5acdad3cbc2ea03770e8c4a823ea404aef978",
+  "depends": [
+    "__osx >=11.0",
+    "libgettextpo 0.25.1 hae62183_2",
+    "libiconv >=1.18,<2.0a0",
+    "libintl 0.25.1 hae62183_2"
+  ],
+  "constrains": [],
+  "license": "GPL-3.0-or-later",
+  "timestamp": 1790118727000,
+  "size": 39203,
+  "_requested_specs": [],
+  "package_tarball_full_path": "/Users/anupamkaul/miniforge3/pkgs/libgettextpo-devel-0.25.1-hae62183_2.conda",
+  "extracted_package_dir": "/Users/anupamkaul/miniforge3/pkgs/libgettextpo-devel-0.25.1-hae62183_2",
+  "files": [
+    "include/gettext-po.h",
+    "lib/libgettextpo.dylib"
+  ],
+  "paths_data": {
+    "paths_version": 1,
+    "paths": [
+      {
+        "_path": "include/gettext-po.h",
+        "path_type": "hardlink",
+        "sha256": "d3f27edfdf9218be5b36323a09fd7f1ed601a470a9477669e54823b7b070b031",
+        "size_in_bytes": 15736,
+        "sha256_in_prefix": "d3f27edfdf9218be5b36323a09fd7f1ed601a470a9477669e54823b7b070b031"
+      },
+      {
+        "_path": "lib/libgettextpo.dylib",
+        "path_type": "softlink",
+        "sha256": "7de0f464dcf9d818cb86a4d38c4ac645d47902b25cdb8793b91d94f0a469b13a",
+        "size_in_bytes": 507056
+      }
+    ]
+  },
+  "link": {
+    "source": "/Users/anupamkaul/miniforge3/pkgs/libgettextpo-devel-0.25.1-hae62183_2",
+    "type": 1
+  }
+}

@@ -1,0 +1,265 @@
+(/Users/anupamkaul/other_git/hugging-face/lerobot/.conda_env) anupamkaul@anupamkauls-MacBook-Pro lerobot % ./test6.sh 
+W1025 13:07:55.515000 57084 site-packages/torch/distributed/elastic/multiprocessing/redirects.py:29] NOTE: Redirects are currently not supported in Windows or MacOs.
+objc[57084]: Class AVFFrameReceiver is implemented in both /Users/anupamkaul/other_git/hugging-face/lerobot/.conda_env/lib/python3.12/site-packages/cv2/.dylibs/libavdevice.61.3.100.dylib (0x1237943a8) and /Users/anupamkaul/other_git/hugging-face/lerobot/.conda_env/lib/python3.12/site-packages/av/.dylibs/libavdevice.61.3.100.dylib (0x13bf1c3a8). This may cause spurious casting failures and mysterious crashes. One of the duplicates must be removed or renamed.
+objc[57084]: Class AVFAudioReceiver is implemented in both /Users/anupamkaul/other_git/hugging-face/lerobot/.conda_env/lib/python3.12/site-packages/cv2/.dylibs/libavdevice.61.3.100.dylib (0x1237943f8) and /Users/anupamkaul/other_git/hugging-face/lerobot/.conda_env/lib/python3.12/site-packages/av/.dylibs/libavdevice.61.3.100.dylib (0x13bf1c3f8). This may cause spurious casting failures and mysterious crashes. One of the duplicates must be removed or renamed.
+objc[57084]: Class AVFFrameReceiver is implemented in both /Users/anupamkaul/other_git/hugging-face/lerobot/.conda_env/lib/python3.12/site-packages/cv2/.dylibs/libavdevice.61.3.100.dylib (0x1237943a8) and /Users/anupamkaul/other_git/hugging-face/lerobot/.conda_env/lib/libavdevice.59.7.100.dylib (0x1591c8778). This may cause spurious casting failures and mysterious crashes. One of the duplicates must be removed or renamed.
+objc[57084]: Class AVFAudioReceiver is implemented in both /Users/anupamkaul/other_git/hugging-face/lerobot/.conda_env/lib/python3.12/site-packages/cv2/.dylibs/libavdevice.61.3.100.dylib (0x1237943f8) and /Users/anupamkaul/other_git/hugging-face/lerobot/.conda_env/lib/libavdevice.59.7.100.dylib (0x1591c87c8). This may cause spurious casting failures and mysterious crashes. One of the duplicates must be removed or renamed.
+INFO 2026-10-25 13:07:57 ot_train.py:582 {'accelerator': {'activation_checkpointing': {'mode': <ActivationCheckpointingMode.NONE: 'none'>},
+                 'compile': {'backend': 'inductor',
+                             'enabled': False,
+                             'mode': None,
+                             'regional': True},
+                 'ddp': {'find_unused_parameters': True,
+                         'gradient_as_bucket_view': False,
+                         'static_graph': False},
+                 'fsdp': {'cpu_offload': False,
+                          'ignored_modules': None,
+                          'min_num_params': None,
+                          'reshard_after_forward': True,
+                          'wrap_modules': None},
+                 'grad_scaler': {'backoff_factor': 0.5,
+                                 'growth_factor': 2.0,
+                                 'growth_interval': 2000,
+                                 'init_scale': 65536.0},
+                 'gradient_accumulation': {'steps': 1},
+                 'mixed_precision': 'no'},
+ 'batch_size': 8,
+ 'checkpoint_format': <CheckpointFormat.SAFETENSORS: 'safetensors'>,
+ 'checkpoint_path': None,
+ 'cudnn_deterministic': False,
+ 'dataloader_multiprocessing_context': 'spawn',
+ 'dataset': {'depth_output_unit': 'mm',
+             'episodes': None,
+             'eval_split': 0.0,
+             'exclude_episodes': None,
+             'image_transforms': {'backend': 'dataloader',
+                                  'enable': False,
+                                  'gpu_chunk_size': 32,
+                                  'gpu_compile': True,
+                                  'max_num_transforms': 3,
+                                  'random_order': False,
+                                  'tfs': {'affine': {'kwargs': {'degrees': [-5.0,
+                                                                            5.0],
+                                                                'translate': [0.05,
+                                                                              0.05]},
+                                                     'type': 'RandomAffine',
+                                                     'weight': 1.0},
+                                          'brightness': {'kwargs': {'brightness': [0.8,
+                                                                                   1.2]},
+                                                         'type': 'ColorJitter',
+                                                         'weight': 1.0},
+                                          'contrast': {'kwargs': {'contrast': [0.8,
+                                                                               1.2]},
+                                                       'type': 'ColorJitter',
+                                                       'weight': 1.0},
+                                          'hue': {'kwargs': {'hue': [-0.05,
+                                                                     0.05]},
+                                                  'type': 'ColorJitter',
+                                                  'weight': 1.0},
+                                          'saturation': {'kwargs': {'saturation': [0.5,
+                                                                                   1.5]},
+                                                         'type': 'ColorJitter',
+                                                         'weight': 1.0},
+                                          'sharpness': {'kwargs': {'sharpness': [0.5,
+                                                                                 1.5]},
+                                                        'type': 'SharpnessJitter',
+                                                        'weight': 1.0}}},
+             'repo_id': 'lerobot/aloha_sim_transfer_cube_human',
+             'repo_type': 'dataset',
+             'return_uint8': False,
+             'revision': None,
+             'root': None,
+             'streaming': False,
+             'streaming_byte_budget_gb': 8.0,
+             'streaming_decode_threads': 2,
+             'streaming_decoded_queue_size': 8,
+             'streaming_episode_pool_size': None,
+             'streaming_native_http_connections': None,
+             'streaming_native_http_subranges': 1,
+             'streaming_prefetch_episodes': 8,
+             'streaming_sampling_strategy': <StreamingSamplingStrategy.REMAINING: 'remaining'>,
+             'streaming_sidecar_lock_timeout_s': 1800,
+             'use_imagenet_stats': True,
+             'video_backend': 'torchcodec',
+             'video_decoder_cache_size': None},
+ 'ema': {'decay': None,
+         'enable': False,
+         'inv_gamma': 1.0,
+         'max_decay': 0.9999,
+         'min_decay': 0.0,
+         'power': 0.75,
+         'update_after_step': 0,
+         'use_for_eval': True},
+ 'env': {'disable_env_checker': True,
+         'episode_length': 400,
+         'features': {'action': {'shape': [14],
+                                 'type': <FeatureType.ACTION: 'ACTION'>},
+                      'agent_pos': {'shape': [14],
+                                    'type': <FeatureType.STATE: 'STATE'>},
+                      'pixels/top': {'shape': [480, 640, 3],
+                                     'type': <FeatureType.VISUAL: 'VISUAL'>}},
+         'features_map': {'action': 'action',
+                          'agent_pos': 'observation.state',
+                          'pixels/top': 'observation.images.top',
+                          'top': 'observation.image.top'},
+         'fps': 50,
+         'max_parallel_tasks': 1,
+         'obs_type': 'pixels_agent_pos',
+         'observation_height': 480,
+         'observation_width': 640,
+         'render_mode': 'rgb_array',
+         'task': 'AlohaTransferCube-v0',
+         'type': 'aloha'},
+ 'env_eval_freq': 20000,
+ 'eval': {'batch_size': 12,
+          'n_episodes': 50,
+          'recording': False,
+          'recording_private': False,
+          'recording_repo_id': None,
+          'use_async_envs': True},
+ 'eval_steps': 0,
+ 'job': {'detach': False,
+         'image': 'huggingface/lerobot-gpu:latest',
+         'tags': [],
+         'target': None,
+         'timeout': '2d'},
+ 'job_name': 'aloha_act',
+ 'log_freq': 200,
+ 'max_eval_samples': 0,
+ 'num_workers': 4,
+ 'optimizer': {'betas': [0.9, 0.999],
+               'eps': 1e-08,
+               'fused': None,
+               'grad_clip_norm': 10.0,
+               'lr': 1e-05,
+               'type': 'adamw',
+               'weight_decay': 0.0001},
+ 'output_dir': 'outputs/train/my_first_policy',
+ 'parallelism': {'cfg_parallel': 1,
+                 'context_parallel': {'ring_degree': 1, 'ulysses_degree': 1},
+                 'dp_replicate': 1,
+                 'dp_shard': 1},
+ 'peft': None,
+ 'persistent_workers': True,
+ 'policy': {'chunk_size': 100,
+            'device': 'mps',
+            'dim_feedforward': 3200,
+            'dim_model': 512,
+            'dropout': 0.1,
+            'dtype': None,
+            'feedforward_activation': 'relu',
+            'input_features': {},
+            'kl_weight': 10.0,
+            'latent_dim': 32,
+            'license': None,
+            'n_action_steps': 100,
+            'n_decoder_layers': 1,
+            'n_encoder_layers': 4,
+            'n_heads': 8,
+            'n_obs_steps': 1,
+            'n_vae_encoder_layers': 4,
+            'normalization_mapping': {'ACTION': <NormalizationMode.MEAN_STD: 'MEAN_STD'>,
+                                      'STATE': <NormalizationMode.MEAN_STD: 'MEAN_STD'>,
+                                      'VISUAL': <NormalizationMode.MEAN_STD: 'MEAN_STD'>},
+            'optimizer_fused': None,
+            'optimizer_lr': 1e-05,
+            'optimizer_lr_backbone': 1e-05,
+            'optimizer_weight_decay': 0.0001,
+            'output_features': {},
+            'pre_norm': False,
+            'pretrained_backbone_weights': 'ResNet18_Weights.IMAGENET1K_V1',
+            'pretrained_path': None,
+            'pretrained_revision': None,
+            'private': None,
+            'push_to_hub': False,
+            'replace_final_stride_with_dilation': False,
+            'repo_id': None,
+            'tags': None,
+            'temporal_ensemble_coeff': None,
+            'type': 'act',
+            'use_amp': False,
+            'use_peft': False,
+            'use_vae': True,
+            'vision_backbone': 'resnet18'},
+ 'prefetch_factor': 4,
+ 'rename_map': {},
+ 'resume': False,
+ 'reward_model': None,
+ 'sample_weighting': None,
+ 'save_checkpoint': True,
+ 'save_checkpoint_to_hub': False,
+ 'save_freq': 250,
+ 'scheduler': None,
+ 'seed': 1000,
+ 'steps': 500,
+ 'tolerance_s': 0.0001,
+ 'use_policy_training_preset': True,
+ 'wandb': {'add_tags': True,
+           'console': 'wrap',
+           'console_chunk_max_seconds': 0,
+           'console_multipart': False,
+           'disable_artifact': False,
+           'enable': False,
+           'entity': None,
+           'mode': None,
+           'notes': None,
+           'project': 'lerobot',
+           'resume': None,
+           'run_id': None}}
+INFO 2026-10-25 13:07:57 ot_train.py:589 Logs will be saved locally.
+INFO 2026-10-25 13:07:57 ot_train.py:604 Creating dataset
+Fetching 4 files: 100%|█████████████████████████████████████████████████████████████████████████████| 4/4 [00:00<00:00, 1718.80it/s]
+Download complete:                                                                                              |  0.00B            WARNING 2026-10-25 13:07:57 ts/utils.py:270 Unknown fields in DatasetInfo: ['files_size_in_mb']. These will be ignored.0B            
+Download complete:                                                                                              |  0.00B            
+Reconstruction complete: |                                                                             |  0.00B /  0.00B            
+Fetching 4 files: 100%|█████████████████████████████████████████████████████████████████████████████| 4/4 [00:00<00:00, 2515.70it/s]
+Download complete:                                                                                              |  0.00B            WARNING 2026-10-25 13:07:57 ts/utils.py:270 Unknown fields in DatasetInfo: ['files_size_in_mb']. These will be ignored.0B            
+Download complete:                                                                                              |  0.00B            
+Reconstruction complete: |                                                                             |  0.00B /  0.00B            
+Downloading bytes:                                                                                              |  0.00B            Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.ching 10 files:   0%|                                                                                     | 0/10 [00:00<?, ?it/s]
+WARNING 2026-10-25 13:07:58 ls/_http.py:993 Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+Fetching 10 files: 100%|████████████████████████████████████████████████████████████████████████████| 10/10 [00:01<00:00,  8.05it/s]
+Download complete: █████████████████████████████████████████████████████████████████████████████████████████████| 1.03MB, 1.37MB/s  INFO 2026-10-25 13:07:59 ot_train.py:640 Creating policy████████████████████████████████████████████████| 1.22MB / 1.22MB, 1.36MB/s  
+Downloading: "https://download.pytorch.org/models/resnet18-f37072fd.pth" to /Users/anupamkaul/.cache/torch/hub/checkpoints/resnet18-f37072fd.pth
+100%|██████████████████████████████████████████████████████████████████████████████████████████| 44.7M/44.7M [00:01<00:00, 44.4MB/s]
+INFO 2026-10-25 13:08:00 ot_train.py:735 Creating optimizer and scheduler
+INFO 2026-10-25 13:08:00 ot_train.py:795 Output dir: outputs/train/my_first_policy█████████▉   | 43.1M/44.7M [00:01<00:00, 45.5MB/s]
+INFO 2026-10-25 13:08:00 ot_train.py:797 cfg.env.task='AlohaTransferCube-v0'
+INFO 2026-10-25 13:08:00 ot_train.py:798 Creating environment processors
+INFO 2026-10-25 13:08:00 ot_train.py:802 cfg.steps=500 (500)
+INFO 2026-10-25 13:08:00 ot_train.py:803 dataset.num_frames=20000 (20K)
+INFO 2026-10-25 13:08:00 ot_train.py:804 dataset.num_episodes=50
+INFO 2026-10-25 13:08:00 ot_train.py:805 Effective batch size: 8 x 1 dp workers x 1 grad accum = 8 (topology: dp_replicate=1, dp_shard=1)
+INFO 2026-10-25 13:08:00 ot_train.py:810 num_learnable_params=51613582 (52M)
+INFO 2026-10-25 13:08:00 ot_train.py:811 num_total_params=51613582 (52M)
+Training:   0%|                                                                                           | 0/500 [00:00<?, ?step/s]INFO 2026-10-25 13:08:00 ot_train.py:920 Start offline training on a fixed dataset, with effective batch size: 8
+W1025 13:08:01.981000 57089 site-packages/torch/distributed/elastic/multiprocessing/redirects.py:29] NOTE: Redirects are currently not supported in Windows or MacOs.
+W1025 13:08:01.981000 57087 site-packages/torch/distributed/elastic/multiprocessing/redirects.py:29] NOTE: Redirects are currently not supported in Windows or MacOs.
+W1025 13:08:01.981000 57088 site-packages/torch/distributed/elastic/multiprocessing/redirects.py:29] NOTE: Redirects are currently not supported in Windows or MacOs.
+W1025 13:08:01.981000 57090 site-packages/torch/distributed/elastic/multiprocessing/redirects.py:29] NOTE: Redirects are currently not supported in Windows or MacOs.
+objc[57089]: Class AVFFrameReceiver is implemented in both /Users/anupamkaul/other_git/hugging-face/lerobot/.conda_env/lib/python3.12/site-packages/cv2/.dylibs/libavdevice.61.3.100.dylib (0x1209c83a8) and /Users/anupamkaul/other_git/hugging-face/lerobot/.conda_env/lib/python3.12/site-packages/av/.dylibs/libavdevice.61.3.100.dylib (0x141f943a8). This may cause spurious casting failures and mysterious crashes. One of the duplicates must be removed or renamed.
+objc[57087]: Class AVFFrameReceiver is implemented in both /Users/anupamkaul/other_git/hugging-face/lerobot/.conda_env/lib/python3.12/site-packages/cv2/.dylibs/libavdevice.61.3.100.dylib (0x12dc943a8) and /Users/anupamkaul/other_git/hugging-face/lerobot/.conda_env/lib/python3.12/site-packages/av/.dylibs/libavdevice.61.3.100.dylib (0x1686b03a8). This may cause spurious casting failures and mysterious crashes. One of the duplicates must be removed or renamed.
+objc[57090]: Class AVFFrameReceiver is implemented in both /Users/anupamkaul/other_git/hugging-face/lerobot/.conda_env/lib/python3.12/site-packages/cv2/.dylibs/libavdevice.61.3.100.dylib (0x11be943a8) and /Users/anupamkaul/other_git/hugging-face/lerobot/.conda_env/lib/python3.12/site-packages/av/.dylibs/libavdevice.61.3.100.dylib (0x13bbf03a8). This may cause spurious casting failures and mysterious crashes. One of the duplicates must be removed or renamed.
+objc[57088]: Class AVFFrameReceiver is implemented in both /Users/anupamkaul/other_git/hugging-face/lerobot/.conda_env/lib/python3.12/site-packages/cv2/.dylibs/libavdevice.61.3.100.dylib (0x11e4003a8) and /Users/anupamkaul/other_git/hugging-face/lerobot/.conda_env/lib/python3.12/site-packages/av/.dylibs/libavdevice.61.3.100.dylib (0x168e6c3a8). This may cause spurious casting failures and mysterious crashes. One of the duplicates must be removed or renamed.
+objc[57087]: Class AVFAudioReceiver is implemented in both /Users/anupamkaul/other_git/hugging-face/lerobot/.conda_env/lib/python3.12/site-packages/cv2/.dylibs/libavdevice.61.3.100.dylib (0x12dc943f8) and /Users/anupamkaul/other_git/hugging-face/lerobot/.conda_env/lib/python3.12/site-packages/av/.dylibs/libavdevice.61.3.100.dylib (0x1686b03f8). This may cause spurious casting failures and mysterious crashes. One of the duplicates must be removed or renamed.
+objc[57089]: Class AVFAudioReceiver is implemented in both /Users/anupamkaul/other_git/hugging-face/lerobot/.conda_env/lib/python3.12/site-packages/cv2/.dylibs/libavdevice.61.3.100.dylib (0x1209c83f8) and /Users/anupamkaul/other_git/hugging-face/lerobot/.conda_env/lib/python3.12/site-packages/av/.dylibs/libavdevice.61.3.100.dylib (0x141f943f8). This may cause spurious casting failures and mysterious crashes. One of the duplicates must be removed or renamed.
+objc[57090]: Class AVFAudioReceiver is implemented in both /Users/anupamkaul/other_git/hugging-face/lerobot/.conda_env/lib/python3.12/site-packages/cv2/.dylibs/libavdevice.61.3.100.dylib (0x11be943f8) and /Users/anupamkaul/other_git/hugging-face/lerobot/.conda_env/lib/python3.12/site-packages/av/.dylibs/libavdevice.61.3.100.dylib (0x13bbf03f8). This may cause spurious casting failures and mysterious crashes. One of the duplicates must be removed or renamed.
+objc[57088]: Class AVFAudioReceiver is implemented in both /Users/anupamkaul/other_git/hugging-face/lerobot/.conda_env/lib/python3.12/site-packages/cv2/.dylibs/libavdevice.61.3.100.dylib (0x11e4003f8) and /Users/anupamkaul/other_git/hugging-face/lerobot/.conda_env/lib/python3.12/site-packages/av/.dylibs/libavdevice.61.3.100.dylib (0x168e6c3f8). This may cause spurious casting failures and mysterious crashes. One of the duplicates must be removed or renamed.
+objc[57087]: Class AVFFrameReceiver is implemented in both /Users/anupamkaul/other_git/hugging-face/lerobot/.conda_env/lib/python3.12/site-packages/cv2/.dylibs/libavdevice.61.3.100.dylib (0x12dc943a8) and /Users/anupamkaul/other_git/hugging-face/lerobot/.conda_env/lib/libavdevice.59.7.100.dylib (0x175c00778). This may cause spurious casting failures and mysterious crashes. One of the duplicates must be removed or renamed.
+objc[57089]: Class AVFFrameReceiver is implemented in both /Users/anupamkaul/other_git/hugging-face/lerobot/.conda_env/lib/python3.12/site-packages/cv2/.dylibs/libavdevice.61.3.100.dylib (0x1209c83a8) and /Users/anupamkaul/other_git/hugging-face/lerobot/.conda_env/lib/libavdevice.59.7.100.dylib (0x157f10778). This may cause spurious casting failures and mysterious crashes. One of the duplicates must be removed or renamed.
+objc[57088]: Class AVFFrameReceiver is implemented in both /Users/anupamkaul/other_git/hugging-face/lerobot/.conda_env/lib/python3.12/site-packages/cv2/.dylibs/libavdevice.61.3.100.dylib (0x11e4003a8) and /Users/anupamkaul/other_git/hugging-face/lerobot/.conda_env/lib/libavdevice.59.7.100.dylib (0x176bf8778). This may cause spurious casting failures and mysterious crashes. One of the duplicates must be removed or renamed.
+objc[57090]: Class AVFFrameReceiver is implemented in both /Users/anupamkaul/other_git/hugging-face/lerobot/.conda_env/lib/python3.12/site-packages/cv2/.dylibs/libavdevice.61.3.100.dylib (0x11be943a8) and /Users/anupamkaul/other_git/hugging-face/lerobot/.conda_env/lib/libavdevice.59.7.100.dylib (0x16bc80778). This may cause spurious casting failures and mysterious crashes. One of the duplicates must be removed or renamed.
+objc[57087]: Class AVFAudioReceiver is implemented in both /Users/anupamkaul/other_git/hugging-face/lerobot/.conda_env/lib/python3.12/site-packages/cv2/.dylibs/libavdevice.61.3.100.dylib (0x12dc943f8) and /Users/anupamkaul/other_git/hugging-face/lerobot/.conda_env/lib/libavdevice.59.7.100.dylib (0x175c007c8). This may cause spurious casting failures and mysterious crashes. One of the duplicates must be removed or renamed.
+objc[57089]: Class AVFAudioReceiver is implemented in both /Users/anupamkaul/other_git/hugging-face/lerobot/.conda_env/lib/python3.12/site-packages/cv2/.dylibs/libavdevice.61.3.100.dylib (0x1209c83f8) and /Users/anupamkaul/other_git/hugging-face/lerobot/.conda_env/lib/libavdevice.59.7.100.dylib (0x157f107c8). This may cause spurious casting failures and mysterious crashes. One of the duplicates must be removed or renamed.
+objc[57090]: Class AVFAudioReceiver is implemented in both /Users/anupamkaul/other_git/hugging-face/lerobot/.conda_env/lib/python3.12/site-packages/cv2/.dylibs/libavdevice.61.3.100.dylib (0x11be943f8) and /Users/anupamkaul/other_git/hugging-face/lerobot/.conda_env/lib/libavdevice.59.7.100.dylib (0x16bc807c8). This may cause spurious casting failures and mysterious crashes. One of the duplicates must be removed or renamed.
+objc[57088]: Class AVFAudioReceiver is implemented in both /Users/anupamkaul/other_git/hugging-face/lerobot/.conda_env/lib/python3.12/site-packages/cv2/.dylibs/libavdevice.61.3.100.dylib (0x11e4003f8) and /Users/anupamkaul/other_git/hugging-face/lerobot/.conda_env/lib/libavdevice.59.7.100.dylib (0x176bf87c8). This may cause spurious casting failures and mysterious crashes. One of the duplicates must be removed or renamed.
+Download complete: █████████████████████████████████████████████████████████████████████████████████████████████| 1.03MB, 1.37MB/s  
+Reconstruction complete: 100%|█████████████████████████████████████████████████████████████████████████| 1.22MB / 1.22MB, 1.36MB/s  
+Training:  40%|████████████████████████████████▍                                                | 200/500 [00:36<00:41,  7.28step/s]INFO 2026-10-25 13:08:37 ot_train.py:972 step:200 smpl:2K ep:4 epch:0.08 loss:7.392 grdn:158.467 lr:1.0e-05 data_s:0.016 prep_s:0.001 updt_s:0.166 step_s:0.183 smp/s:44 l1_loss:0.623 kld_loss:0.677
+Training:  50%|████████████████████████████████████████▌                                        | 250/500 [00:43<00:35,  7.10step/s]INFO 2026-10-25 13:08:44 t_train.py:1014 Checkpoint policy after step 250
+INFO 2026-10-25 13:08:44 n/_torch.py:299 Model weights successfully saved to outputs/train/my_first_policy/checkpoints/000250/pretrained_model!
+Training:  80%|████████████████████████████████████████████████████████████████▊                | 400/500 [01:04<00:13,  7.40step/s]INFO 2026-10-25 13:09:05 ot_train.py:972 step:400 smpl:3K ep:8 epch:0.16 loss:3.184 grdn:88.213 lr:1.0e-05 data_s:0.003 prep_s:0.000 updt_s:0.135 step_s:0.138 smp/s:58 l1_loss:0.504 kld_loss:0.268
+Training: 100%|█████████████████████████████████████████████████████████████████████████████████| 500/500 [01:18<00:00,  7.36step/s]INFO 2026-10-25 13:09:18 t_train.py:1014 Checkpoint policy after step 500
+INFO 2026-10-25 13:09:18 n/_torch.py:299 Model weights successfully saved to outputs/train/my_first_policy/checkpoints/000500/pretrained_model!
+Training: 100%|█████████████████████████████████████████████████████████████████████████████████| 500/500 [01:18<00:00,  6.37step/s]
+INFO 2026-10-25 13:09:19 t_train.py:1118 End of training

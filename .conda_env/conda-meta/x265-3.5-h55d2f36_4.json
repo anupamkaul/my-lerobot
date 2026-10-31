@@ -1,0 +1,83 @@
+{
+  "name": "x265",
+  "version": "3.5",
+  "build": "h55d2f36_4",
+  "build_number": 4,
+  "channel": "https://conda.anaconda.org/conda-forge/osx-arm64",
+  "subdir": "osx-arm64",
+  "fn": "x265-3.5-h55d2f36_4.conda",
+  "md5": "7c78b3dc0fda0813f8bc7915c8c64355",
+  "url": "https://conda.anaconda.org/conda-forge/osx-arm64/x265-3.5-h55d2f36_4.conda",
+  "sha256": "78850cd685004b1c5e41c2dd0a4fd1c9e3dd150279da8d99925832983ba82688",
+  "depends": [
+    "__osx >=11.0",
+    "libcxx >=21"
+  ],
+  "constrains": [],
+  "license": "GPL-2.0-or-later",
+  "timestamp": 1788446904000,
+  "size": 990585,
+  "_requested_specs": [],
+  "package_tarball_full_path": "/Users/anupamkaul/miniforge3/pkgs/x265-3.5-h55d2f36_4.conda",
+  "extracted_package_dir": "/Users/anupamkaul/miniforge3/pkgs/x265-3.5-h55d2f36_4",
+  "files": [
+    "bin/x265",
+    "include/x265.h",
+    "include/x265_config.h",
+    "lib/libx265.199.dylib",
+    "lib/libx265.dylib",
+    "lib/pkgconfig/x265.pc"
+  ],
+  "paths_data": {
+    "paths_version": 1,
+    "paths": [
+      {
+        "_path": "bin/x265",
+        "path_type": "hardlink",
+        "sha256": "1e4f5017cda3e1ecad4d293a67a19d221b336e7a446a878e06ad8a5446b3b6d4",
+        "size_in_bytes": 173328,
+        "sha256_in_prefix": "1e4f5017cda3e1ecad4d293a67a19d221b336e7a446a878e06ad8a5446b3b6d4"
+      },
+      {
+        "_path": "include/x265.h",
+        "path_type": "hardlink",
+        "sha256": "d61fbb2d20377d4eda239319a3bef73b68f5dc4b0f7b5e76372fa272cb7e9ad5",
+        "size_in_bytes": 103877,
+        "sha256_in_prefix": "d61fbb2d20377d4eda239319a3bef73b68f5dc4b0f7b5e76372fa272cb7e9ad5"
+      },
+      {
+        "_path": "include/x265_config.h",
+        "path_type": "hardlink",
+        "sha256": "38ec8faa3de8b9dbfaa4cd42f6255cf78ca189e02c5ea6d1f8012cf5bbca628f",
+        "size_in_bytes": 1426,
+        "sha256_in_prefix": "38ec8faa3de8b9dbfaa4cd42f6255cf78ca189e02c5ea6d1f8012cf5bbca628f"
+      },
+      {
+        "_path": "lib/libx265.199.dylib",
+        "path_type": "hardlink",
+        "sha256": "73917264912a5c86a8d55ef55129f2fc9176659377b121516a372f3a7dbb9c0b",
+        "size_in_bytes": 5407984,
+        "sha256_in_prefix": "73917264912a5c86a8d55ef55129f2fc9176659377b121516a372f3a7dbb9c0b"
+      },
+      {
+        "_path": "lib/libx265.dylib",
+        "path_type": "softlink",
+        "sha256": "73917264912a5c86a8d55ef55129f2fc9176659377b121516a372f3a7dbb9c0b",
+        "size_in_bytes": 5407984
+      },
+      {
+        "_path": "lib/pkgconfig/x265.pc",
+        "prefix_placeholder": "/Users/runner/miniforge3/conda-bld/x265_1788446347888/_h_env_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_plac",
+        "file_mode": "text",
+        "path_type": "hardlink",
+        "sha256": "46e3f043d3cfc0b8880f963e3afe8dcbe9b5471bfa4c56bb06c47e1c84df602d",
+        "size_in_bytes": 477,
+        "sha256_in_prefix": "ce6f1651ac50bb5ea9b9f1e3fa17bbb5c6f200895659aa3c7dd11b191df6697a"
+      }
+    ]
+  },
+  "link": {
+    "source": "/Users/anupamkaul/miniforge3/pkgs/x265-3.5-h55d2f36_4",
+    "type": 1
+  }
+}

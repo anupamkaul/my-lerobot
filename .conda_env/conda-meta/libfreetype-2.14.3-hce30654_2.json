@@ -1,0 +1,31 @@
+{
+  "name": "libfreetype",
+  "version": "2.14.3",
+  "build": "hce30654_2",
+  "build_number": 2,
+  "channel": "https://conda.anaconda.org/conda-forge/osx-arm64",
+  "subdir": "osx-arm64",
+  "fn": "libfreetype-2.14.3-hce30654_2.conda",
+  "md5": "ee1fc5bba400ff0cae27fbf141a1ae0c",
+  "url": "https://conda.anaconda.org/conda-forge/osx-arm64/libfreetype-2.14.3-hce30654_2.conda",
+  "sha256": "19ce8bd320414cb6b9889ecbf48a3ded848b0d1068b76ff6bea099bd7387d6f3",
+  "depends": [
+    "libfreetype6 >=2.14.3"
+  ],
+  "constrains": [],
+  "license": "GPL-2.0-only OR FTL",
+  "timestamp": 1786641013000,
+  "size": 8367,
+  "_requested_specs": [],
+  "package_tarball_full_path": "/Users/anupamkaul/miniforge3/pkgs/libfreetype-2.14.3-hce30654_2.conda",
+  "extracted_package_dir": "/Users/anupamkaul/miniforge3/pkgs/libfreetype-2.14.3-hce30654_2",
+  "files": [],
+  "paths_data": {
+    "paths_version": 1,
+    "paths": []
+  },
+  "link": {
+    "source": "/Users/anupamkaul/miniforge3/pkgs/libfreetype-2.14.3-hce30654_2",
+    "type": 1
+  }
+}

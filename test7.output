@@ -1,0 +1,106 @@
+(/Users/anupamkaul/other_git/hugging-face/lerobot/.conda_env) anupamkaul@anupamkauls-MacBook-Pro lerobot % ./test7.sh 
+W1025 13:48:15.100000 57201 site-packages/torch/distributed/elastic/multiprocessing/redirects.py:29] NOTE: Redirects are currently not supported in Windows or MacOs.
+objc[57201]: Class AVFFrameReceiver is implemented in both /Users/anupamkaul/other_git/hugging-face/lerobot/.conda_env/lib/python3.12/site-packages/cv2/.dylibs/libavdevice.61.3.100.dylib (0x1233e43a8) and /Users/anupamkaul/other_git/hugging-face/lerobot/.conda_env/lib/python3.12/site-packages/av/.dylibs/libavdevice.61.3.100.dylib (0x15fb8c3a8). This may cause spurious casting failures and mysterious crashes. One of the duplicates must be removed or renamed.
+objc[57201]: Class AVFAudioReceiver is implemented in both /Users/anupamkaul/other_git/hugging-face/lerobot/.conda_env/lib/python3.12/site-packages/cv2/.dylibs/libavdevice.61.3.100.dylib (0x1233e43f8) and /Users/anupamkaul/other_git/hugging-face/lerobot/.conda_env/lib/python3.12/site-packages/av/.dylibs/libavdevice.61.3.100.dylib (0x15fb8c3f8). This may cause spurious casting failures and mysterious crashes. One of the duplicates must be removed or renamed.
+WARNING 2026-10-25 13:48:16 figs/eval.py:69 No job name provided, using 'aloha_act' as job name.
+INFO 2026-10-25 13:48:16 bot_eval.py:767 {'env': {'disable_env_checker': True,
+         'episode_length': 400,
+         'features': {'action': {'shape': (14,),
+                                 'type': <FeatureType.ACTION: 'ACTION'>},
+                      'agent_pos': {'shape': (14,),
+                                    'type': <FeatureType.STATE: 'STATE'>},
+                      'pixels/top': {'shape': (480, 640, 3),
+                                     'type': <FeatureType.VISUAL: 'VISUAL'>}},
+         'features_map': {'action': 'action',
+                          'agent_pos': 'observation.state',
+                          'pixels/top': 'observation.images.top',
+                          'top': 'observation.image.top'},
+         'fps': 50,
+         'max_parallel_tasks': 1,
+         'obs_type': 'pixels_agent_pos',
+         'observation_height': 480,
+         'observation_width': 640,
+         'render_mode': 'rgb_array',
+         'task': 'AlohaInsertion-v0'},
+ 'eval': {'batch_size': 1,
+          'n_episodes': 2,
+          'recording': False,
+          'recording_private': False,
+          'recording_repo_id': None,
+          'use_async_envs': True},
+ 'job_name': 'aloha_act',
+ 'output_dir': PosixPath('outputs/eval/2026-10-25/13-48-16_aloha_act'),
+ 'policy': {'chunk_size': 100,
+            'device': 'mps',
+            'dim_feedforward': 3200,
+            'dim_model': 512,
+            'dropout': 0.1,
+            'dtype': None,
+            'feedforward_activation': 'relu',
+            'input_features': {'observation.images.top': {'shape': (3,
+                                                                    480,
+                                                                    640),
+                                                          'type': <FeatureType.VISUAL: 'VISUAL'>},
+                               'observation.state': {'shape': (14,),
+                                                     'type': <FeatureType.STATE: 'STATE'>}},
+            'kl_weight': 10.0,
+            'latent_dim': 32,
+            'license': None,
+            'n_action_steps': 100,
+            'n_decoder_layers': 1,
+            'n_encoder_layers': 4,
+            'n_heads': 8,
+            'n_obs_steps': 1,
+            'n_vae_encoder_layers': 4,
+            'normalization_mapping': {'ACTION': <NormalizationMode.MEAN_STD: 'MEAN_STD'>,
+                                      'STATE': <NormalizationMode.MEAN_STD: 'MEAN_STD'>,
+                                      'VISUAL': <NormalizationMode.MEAN_STD: 'MEAN_STD'>},
+            'optimizer_fused': None,
+            'optimizer_lr': 1e-05,
+            'optimizer_lr_backbone': 1e-05,
+            'optimizer_weight_decay': 0.0001,
+            'output_features': {'action': {'shape': (14,),
+                                           'type': <FeatureType.ACTION: 'ACTION'>}},
+            'pre_norm': False,
+            'pretrained_backbone_weights': 'ResNet18_Weights.IMAGENET1K_V1',
+            'pretrained_path': PosixPath('outputs/train/my_first_policy/checkpoints/last/pretrained_model'),
+            'pretrained_revision': None,
+            'private': None,
+            'push_to_hub': False,
+            'replace_final_stride_with_dilation': 0,
+            'repo_id': None,
+            'tags': None,
+            'temporal_ensemble_coeff': None,
+            'use_amp': False,
+            'use_peft': False,
+            'use_vae': True,
+            'vision_backbone': 'resnet18'},
+ 'rename_map': {},
+ 'seed': 1000,
+ 'trust_remote_code': False}
+INFO 2026-10-25 13:48:16 bot_eval.py:787 Output dir: outputs/eval/2026-10-25/13-48-16_aloha_act
+INFO 2026-10-25 13:48:16 bot_eval.py:789 Making environment (batch_size=1, async=True).
+gym id 'gym_aloha/AlohaInsertion-v0' not found, attempting to import 'gym_aloha'...
+INFO 2026-10-25 13:48:16 /__init__.py:92 MUJOCO_GL is not set, so an OpenGL backend will be chosen automatically.
+INFO 2026-10-25 13:48:16 __init__.py:100 Successfully imported OpenGL backend: glfw
+INFO 2026-10-25 13:48:16 /__init__.py:31 MuJoCo library version is: 3.8.1
+INFO 2026-10-25 13:48:17 bot_eval.py:797 Making policy.
+Loading weights from local directory
+Stepping through eval batches:   0%|                                                                          | 0/2 [00:00<?, ?it/s]/Users/anupamkaul/other_git/hugging-face/lerobot/src/lerobot/scripts/lerobot_eval.py:288: UserWarning: The environment does not have 'task_description' and 'task'. Some policies require these features.
+  check_env_attributes_and_types(env)
+Stepping through eval batches:  50%|███████████████████▌                   | 1/2 [00:05<00:05,  5.36s/it, running_success_rate=0.0%]/Users/anupamkaul/other_git/hugging-face/lerobot/src/lerobot/scripts/lerobot_eval.py:288: UserWarning: The environment does not have 'task_description' and 'task'. Some policies require these features.
+  check_env_attributes_and_types(env)
+Stepping through eval batches: 100%|███████████████████████████████████████| 2/2 [00:09<00:00,  4.95s/it, running_success_rate=0.0%]
+INFO 2026-10-25 13:48:28 bot_eval.py:845 Overall Aggregated Metrics:                                                                
+INFO 2026-10-25 13:48:28 bot_eval.py:846 {'avg_sum_reward': 0.0, 'avg_max_reward': 0.0, 'pc_success': 0.0, 'n_episodes': 2, 'n_success': 0, 'pc_success_ci95': [0.0, 65.76197724933468], 'eval_s': 10.404654264450073, 'eval_ep_s': 5.202327132225037, 'video_paths': ['outputs/eval/2026-10-25/13-48-16_aloha_act/videos/aloha_0/eval_episode_0.mp4', 'outputs/eval/2026-10-25/13-48-16_aloha_act/videos/aloha_0/eval_episode_1.mp4'], 'predicted_video_paths': []}
+INFO 2026-10-25 13:48:28 bot_eval.py:848 Success rate 0.0% (0/2 episodes, 95% Wilson interval 0.0% to 65.8%)
+INFO 2026-10-25 13:48:28 bot_eval.py:859 
+Aggregated Metrics for per_task:
+INFO 2026-10-25 13:48:28 bot_eval.py:860 [{'task_group': 'aloha', 'task_id': 0, 'metrics': {'sum_rewards': [0.0, 0.0], 'max_rewards': [0.0, 0.0], 'successes': [False, False], 'video_paths': ['outputs/eval/2026-10-25/13-48-16_aloha_act/videos/aloha_0/eval_episode_0.mp4', 'outputs/eval/2026-10-25/13-48-16_aloha_act/videos/aloha_0/eval_episode_1.mp4'], 'predicted_video_paths': []}, 'n_episodes': 2, 'n_success': 0, 'pc_success': 0.0, 'pc_success_ci95': [0.0, 65.76197724933468]}]
+INFO 2026-10-25 13:48:28 bot_eval.py:859 
+Aggregated Metrics for per_group:
+INFO 2026-10-25 13:48:28 bot_eval.py:860 {'aloha': {'avg_sum_reward': 0.0, 'avg_max_reward': 0.0, 'pc_success': 0.0, 'n_episodes': 2, 'n_success': 0, 'pc_success_ci95': [0.0, 65.76197724933468], 'video_paths': ['outputs/eval/2026-10-25/13-48-16_aloha_act/videos/aloha_0/eval_episode_0.mp4', 'outputs/eval/2026-10-25/13-48-16_aloha_act/videos/aloha_0/eval_episode_1.mp4'], 'predicted_video_paths': []}}
+INFO 2026-10-25 13:48:28 bot_eval.py:859 
+Aggregated Metrics for overall:
+INFO 2026-10-25 13:48:28 bot_eval.py:860 {'avg_sum_reward': 0.0, 'avg_max_reward': 0.0, 'pc_success': 0.0, 'n_episodes': 2, 'n_success': 0, 'pc_success_ci95': [0.0, 65.76197724933468], 'eval_s': 10.404654264450073, 'eval_ep_s': 5.202327132225037, 'video_paths': ['outputs/eval/2026-10-25/13-48-16_aloha_act/videos/aloha_0/eval_episode_0.mp4', 'outputs/eval/2026-10-25/13-48-16_aloha_act/videos/aloha_0/eval_episode_1.mp4'], 'predicted_video_paths': []}
+INFO 2026-10-25 13:48:28 bot_eval.py:868 End of eval

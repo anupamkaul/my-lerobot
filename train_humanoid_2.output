@@ -1,0 +1,155 @@
+(/Users/anupamkaul/other_git/hugging-face/lerobot/.conda_env) anupamkaul@anupamkauls-MacBook-Pro lerobot % python train_humanoid_2.py
+[Genesis] [18:30:56] [INFO] ╭─────────────────────────────────────────────────────────────────────────────────────╮
+[Genesis] [18:30:56] [INFO] │┈┉┈┉┈┉┈┉┈┉┈┉┈┉┈┉┈┉┈┉┈┉┈┉┈┉┈┉┈┉┈┉┈┉┈┉┈┉ Genesis ┈┉┈┉┈┉┈┉┈┉┈┉┈┉┈┉┈┉┈┉┈┉┈┉┈┉┈┉┈┉┈┉┈┉┈┉┈┉│
+[Genesis] [18:30:56] [INFO] ╰─────────────────────────────────────────────────────────────────────────────────────╯
+[Genesis] [18:30:56] [INFO] Running on [Apple M5 Max] with backend gs.metal. Device memory: 128.00 GB.
+[Genesis] [18:30:56] [INFO] 🚀 Genesis initialized. 🔖 version: 1.4.5, 🎨 theme: dark, 🌱 seed: None, 🐛 debug: False, 📏 precision: 32, 🔥 performance: False, 💬 verbose: INFO
+🔋 Initializing training grid (32 humanoids)...
+[Genesis] [18:30:57] [INFO] Scene <f0397ae> created.
+/Users/anupamkaul/other_git/hugging-face/lerobot/.conda_env/lib/python3.12/site-packages/genesis/utils/geom.py:1476: RuntimeWarning: divide by zero encountered in matmul
+  new_pos = np.matmul(R, pos_.swapaxes(1, 2)).swapaxes(1, 2)
+/Users/anupamkaul/other_git/hugging-face/lerobot/.conda_env/lib/python3.12/site-packages/genesis/utils/geom.py:1476: RuntimeWarning: overflow encountered in matmul
+  new_pos = np.matmul(R, pos_.swapaxes(1, 2)).swapaxes(1, 2)
+/Users/anupamkaul/other_git/hugging-face/lerobot/.conda_env/lib/python3.12/site-packages/genesis/utils/geom.py:1476: RuntimeWarning: invalid value encountered in matmul
+  new_pos = np.matmul(R, pos_.swapaxes(1, 2)).swapaxes(1, 2)
+[Genesis] [18:30:57] [INFO] Adding <gs.engine.entities.RigidEntity> plane_2619c5d. idx: 0, morph: <gs.morphs.Plane>, material: <gs.materials.Rigid>.
+[Genesis] [18:30:57] [WARNING] Link 'left_hip_yaw_link' has dubious mass 2.965 compared to the estimate from geometry 0.009.
+[Genesis] [18:30:57] [WARNING] Link 'left_hip_roll_link' has dubious mass 2.715 compared to the estimate from geometry 0.019.
+[Genesis] [18:30:57] [WARNING] Link 'right_hip_yaw_link' has dubious mass 2.965 compared to the estimate from geometry 0.009.
+[Genesis] [18:30:57] [WARNING] Link 'right_hip_roll_link' has dubious mass 2.715 compared to the estimate from geometry 0.019.
+[Genesis] [18:30:57] [INFO] Adding <gs.engine.entities.RigidEntity> h1_description_cb69bf5. idx: 1, morph: <gs.morphs.URDF(file='/Users/anupamkaul/other_git/hugging-face/unitree_ros/robots/h1_description/urdf/h1.urdf')>, material: <gs.materials.Rigid>.
+[Genesis] [18:30:57] [INFO] Building scene <f0397ae>...
+/Users/anupamkaul/other_git/hugging-face/lerobot/.conda_env/lib/python3.12/site-packages/genesis/engine/mesh.py:972: RuntimeWarning: divide by zero encountered in matmul
+  [hull_vid[np.argmax(nodes_chunk @ verts[hull_vid].T, axis=-1)] for nodes_chunk in nodes_chunks]
+/Users/anupamkaul/other_git/hugging-face/lerobot/.conda_env/lib/python3.12/site-packages/genesis/engine/mesh.py:972: RuntimeWarning: overflow encountered in matmul
+  [hull_vid[np.argmax(nodes_chunk @ verts[hull_vid].T, axis=-1)] for nodes_chunk in nodes_chunks]
+/Users/anupamkaul/other_git/hugging-face/lerobot/.conda_env/lib/python3.12/site-packages/genesis/engine/mesh.py:972: RuntimeWarning: invalid value encountered in matmul
+  [hull_vid[np.argmax(nodes_chunk @ verts[hull_vid].T, axis=-1)] for nodes_chunk in nodes_chunks]
+/Users/anupamkaul/other_git/hugging-face/lerobot/.conda_env/lib/python3.12/site-packages/genesis/engine/mesh.py:999: RuntimeWarning: divide by zero encountered in matmul
+  np.arctan2(-arcs_start_chart @ meridians_normal.T, arcs_orthogonal_chart @ meridians_normal.T),
+/Users/anupamkaul/other_git/hugging-face/lerobot/.conda_env/lib/python3.12/site-packages/genesis/engine/mesh.py:999: RuntimeWarning: overflow encountered in matmul
+  np.arctan2(-arcs_start_chart @ meridians_normal.T, arcs_orthogonal_chart @ meridians_normal.T),
+/Users/anupamkaul/other_git/hugging-face/lerobot/.conda_env/lib/python3.12/site-packages/genesis/engine/mesh.py:999: RuntimeWarning: invalid value encountered in matmul
+  np.arctan2(-arcs_start_chart @ meridians_normal.T, arcs_orthogonal_chart @ meridians_normal.T),
+/Users/anupamkaul/other_git/hugging-face/lerobot/.conda_env/lib/python3.12/site-packages/genesis/engine/mesh.py:1041: RuntimeWarning: divide by zero encountered in matmul
+  directions_chart = directions @ CHARTS_ROT[i_chart].T
+/Users/anupamkaul/other_git/hugging-face/lerobot/.conda_env/lib/python3.12/site-packages/genesis/engine/mesh.py:1041: RuntimeWarning: overflow encountered in matmul
+  directions_chart = directions @ CHARTS_ROT[i_chart].T
+/Users/anupamkaul/other_git/hugging-face/lerobot/.conda_env/lib/python3.12/site-packages/genesis/engine/mesh.py:1041: RuntimeWarning: invalid value encountered in matmul
+  directions_chart = directions @ CHARTS_ROT[i_chart].T
+[Genesis] [18:30:57] [INFO] Compiling simulation kernels...
+[Genesis] [18:30:58] [INFO] Building visualizer...
+🚀 PPO Optimization Loop Commenced...
+/Users/anupamkaul/other_git/hugging-face/lerobot/.conda_env/lib/python3.12/site-packages/quadrants/lang/_func_base.py:831: UserWarning: The .grad attribute of a Tensor that is not a leaf Tensor is being accessed. Its .grad attribute won't be populated during autograd.backward(). If you indeed want the .grad field to be populated for a non-leaf Tensor, use .retain_grad() on the non-leaf Tensor. If you access the non-leaf Tensor by mistake, make sure you access the leaf Tensor instead. See github.com/pytorch/pytorch/pull/30531 for more information. (Triggered internally at /Users/runner/work/pytorch/pytorch/pytorch/build/aten/src/ATen/core/TensorBody.h:499.)
+  if v.requires_grad and v.grad is None:
+[Genesis] [18:30:58] [INFO] Running at 1,861.76 FPS (58.18 FPS per env, 32 envs).
+🔄 Epoch   0/100 | Speed: 0.010 m/s | Loss: 0.2804
+[Genesis] [18:30:58] [INFO] Running at 1,797.86 FPS (56.18 FPS per env, 32 envs).
+[Genesis] [18:30:59] [INFO] Running at 1,990.37 FPS (62.20 FPS per env, 32 envs).
+[Genesis] [18:30:59] [INFO] Running at 2,172.16 FPS (67.88 FPS per env, 32 envs).
+[Genesis] [18:30:59] [INFO] Running at 2,336.78 FPS (73.02 FPS per env, 32 envs).
+[Genesis] [18:30:59] [INFO] Running at 2,498.17 FPS (78.07 FPS per env, 32 envs).
+[Genesis] [18:30:59] [INFO] Running at 2,652.59 FPS (82.89 FPS per env, 32 envs).
+[Genesis] [18:30:59] [INFO] Running at 2,813.50 FPS (87.92 FPS per env, 32 envs).
+[Genesis] [18:30:59] [INFO] Running at 2,961.47 FPS (92.55 FPS per env, 32 envs).
+[Genesis] [18:30:59] [INFO] Running at 3,107.58 FPS (97.11 FPS per env, 32 envs).
+[Genesis] [18:30:59] [INFO] Running at 3,240.62 FPS (101.27 FPS per env, 32 envs).
+[Genesis] [18:30:59] [INFO] Running at 3,361.50 FPS (105.05 FPS per env, 32 envs).
+🔄 Epoch  20/100 | Speed: 0.052 m/s | Loss: 1.0788
+[Genesis] [18:30:59] [INFO] Running at 3,478.82 FPS (108.71 FPS per env, 32 envs).
+[Genesis] [18:30:59] [INFO] Running at 3,596.97 FPS (112.41 FPS per env, 32 envs).
+[Genesis] [18:30:59] [INFO] Running at 3,718.71 FPS (116.21 FPS per env, 32 envs).
+[Genesis] [18:30:59] [INFO] Running at 3,823.62 FPS (119.49 FPS per env, 32 envs).
+[Genesis] [18:30:59] [INFO] Running at 3,929.40 FPS (122.79 FPS per env, 32 envs).
+[Genesis] [18:30:59] [INFO] Running at 4,032.46 FPS (126.01 FPS per env, 32 envs).
+[Genesis] [18:30:59] [INFO] Running at 4,128.93 FPS (129.03 FPS per env, 32 envs).
+[Genesis] [18:30:59] [INFO] Running at 4,228.36 FPS (132.14 FPS per env, 32 envs).
+[Genesis] [18:31:00] [INFO] Running at 4,318.53 FPS (134.95 FPS per env, 32 envs).
+[Genesis] [18:31:00] [INFO] Running at 4,409.51 FPS (137.80 FPS per env, 32 envs).
+🔄 Epoch  40/100 | Speed: 0.282 m/s | Loss: 1.5264
+[Genesis] [18:31:00] [INFO] Running at 4,492.25 FPS (140.38 FPS per env, 32 envs).
+[Genesis] [18:31:00] [INFO] Running at 4,559.48 FPS (142.48 FPS per env, 32 envs).
+[Genesis] [18:31:00] [INFO] Running at 4,622.56 FPS (144.45 FPS per env, 32 envs).
+[Genesis] [18:31:00] [INFO] Running at 4,686.38 FPS (146.45 FPS per env, 32 envs).
+[Genesis] [18:31:00] [INFO] Running at 4,739.26 FPS (148.10 FPS per env, 32 envs).
+[Genesis] [18:31:00] [INFO] Running at 4,816.99 FPS (150.53 FPS per env, 32 envs).
+[Genesis] [18:31:00] [INFO] Running at 4,875.48 FPS (152.36 FPS per env, 32 envs).
+[Genesis] [18:31:00] [INFO] Running at 4,943.25 FPS (154.48 FPS per env, 32 envs).
+[Genesis] [18:31:00] [INFO] Running at 5,015.17 FPS (156.72 FPS per env, 32 envs).
+[Genesis] [18:31:00] [INFO] Running at 5,060.44 FPS (158.14 FPS per env, 32 envs).
+🔄 Epoch  60/100 | Speed: 0.437 m/s | Loss: 2.0907
+[Genesis] [18:31:00] [INFO] Running at 5,108.90 FPS (159.65 FPS per env, 32 envs).
+[Genesis] [18:31:00] [INFO] Running at 5,155.99 FPS (161.12 FPS per env, 32 envs).
+[Genesis] [18:31:00] [INFO] Running at 5,206.22 FPS (162.69 FPS per env, 32 envs).
+[Genesis] [18:31:00] [INFO] Running at 5,244.32 FPS (163.89 FPS per env, 32 envs).
+[Genesis] [18:31:00] [INFO] Running at 5,286.12 FPS (165.19 FPS per env, 32 envs).
+[Genesis] [18:31:00] [INFO] Running at 5,327.81 FPS (166.49 FPS per env, 32 envs).
+[Genesis] [18:31:00] [INFO] Running at 5,368.18 FPS (167.76 FPS per env, 32 envs).
+[Genesis] [18:31:01] [INFO] Running at 5,412.51 FPS (169.14 FPS per env, 32 envs).
+[Genesis] [18:31:01] [INFO] Running at 5,449.60 FPS (170.30 FPS per env, 32 envs).
+[Genesis] [18:31:01] [INFO] Running at 5,478.13 FPS (171.19 FPS per env, 32 envs).
+🔄 Epoch  80/100 | Speed: 0.000 m/s | Loss: 2.4334
+[Genesis] [18:31:01] [INFO] Running at 5,503.35 FPS (171.98 FPS per env, 32 envs).
+[Genesis] [18:31:01] [INFO] Running at 5,539.06 FPS (173.10 FPS per env, 32 envs).
+[Genesis] [18:31:01] [INFO] Running at 5,566.76 FPS (173.96 FPS per env, 32 envs).
+[Genesis] [18:31:01] [INFO] Running at 5,600.35 FPS (175.01 FPS per env, 32 envs).
+[Genesis] [18:31:01] [INFO] Running at 5,627.27 FPS (175.85 FPS per env, 32 envs).
+[Genesis] [18:31:01] [INFO] Running at 5,648.64 FPS (176.52 FPS per env, 32 envs).
+[Genesis] [18:31:01] [INFO] Running at 5,676.22 FPS (177.38 FPS per env, 32 envs).
+[Genesis] [18:31:01] [INFO] Running at 5,699.31 FPS (178.10 FPS per env, 32 envs).
+[Genesis] [18:31:01] [INFO] Running at 5,723.77 FPS (178.87 FPS per env, 32 envs).
+[Genesis] [18:31:01] [INFO] Running at 5,744.40 FPS (179.51 FPS per env, 32 envs).
+🔄 Epoch 100/100 | Speed: 0.604 m/s | Loss: 3.0577
+💾 Model architecture weights saved successfully to: humanoid_ppo_policy.pt
+
+🖥️ Launching Single-Humanoid Inference Evaluation Window...
+[Genesis] [18:31:01] [WARNING] Interactive viewer running in main thread. It will only be responsive if a simulation is running.
+[Genesis] [18:31:01] [INFO] Scene <3eefe89> created.
+/Users/anupamkaul/other_git/hugging-face/lerobot/.conda_env/lib/python3.12/site-packages/genesis/utils/geom.py:1476: RuntimeWarning: divide by zero encountered in matmul
+  new_pos = np.matmul(R, pos_.swapaxes(1, 2)).swapaxes(1, 2)
+/Users/anupamkaul/other_git/hugging-face/lerobot/.conda_env/lib/python3.12/site-packages/genesis/utils/geom.py:1476: RuntimeWarning: overflow encountered in matmul
+  new_pos = np.matmul(R, pos_.swapaxes(1, 2)).swapaxes(1, 2)
+/Users/anupamkaul/other_git/hugging-face/lerobot/.conda_env/lib/python3.12/site-packages/genesis/utils/geom.py:1476: RuntimeWarning: invalid value encountered in matmul
+  new_pos = np.matmul(R, pos_.swapaxes(1, 2)).swapaxes(1, 2)
+[Genesis] [18:31:01] [INFO] Adding <gs.engine.entities.RigidEntity> plane_dbdbeb1. idx: 0, morph: <gs.morphs.Plane>, material: <gs.materials.Rigid>.
+[Genesis] [18:31:01] [WARNING] Link 'left_hip_yaw_link' has dubious mass 2.965 compared to the estimate from geometry 0.009.
+[Genesis] [18:31:01] [WARNING] Link 'left_hip_roll_link' has dubious mass 2.715 compared to the estimate from geometry 0.019.
+[Genesis] [18:31:01] [WARNING] Link 'right_hip_yaw_link' has dubious mass 2.965 compared to the estimate from geometry 0.009.
+[Genesis] [18:31:01] [WARNING] Link 'right_hip_roll_link' has dubious mass 2.715 compared to the estimate from geometry 0.019.
+[Genesis] [18:31:01] [INFO] Adding <gs.engine.entities.RigidEntity> h1_description_4161e84. idx: 1, morph: <gs.morphs.URDF(file='/Users/anupamkaul/other_git/hugging-face/unitree_ros/robots/h1_description/urdf/h1.urdf')>, material: <gs.materials.Rigid>.
+[Genesis] [18:31:01] [INFO] Building scene <3eefe89>...
+[Genesis] [18:31:03] [INFO] Compiling simulation kernels...
+[W 10/25/26 18:31:16.940 14370288] QuadrantsWarning
+While compiling `func_solve_init_c694_1`, File "/Users/anupamkaul/other_git/hugging-face/lerobot/.conda_env/lib/python3.12/site-packages/genesis/engine/solvers/rigid/constraint/linesearch.py", line 1596, in func_exit_islands_coop:
+            is_active = constraint_state.island.improved[i_island, i_b]
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Assign may lose precision: u1 <- i32
+/Users/anupamkaul/other_git/hugging-face/lerobot/.conda_env/lib/python3.12/site-packages/quadrants/lang/ast/ast_transformers/function_def_transformer.py:781: DeprecationWarning: ast.Str is deprecated and will be removed in Python 3.14; use ast.Constant instead
+  return index == 0 and isinstance(stmt, ast.Expr) and isinstance(stmt.value, (ast.Constant, ast.Str))
+[W 10/25/26 18:31:22.809 14370288] QuadrantsWarning
+While compiling `_kernel_solve_graph_c700_1`, File "/Users/anupamkaul/other_git/hugging-face/lerobot/.conda_env/lib/python3.12/site-packages/genesis/engine/solvers/rigid/constraint/linesearch.py", line 1258, in func_linesearch_islands_coop:
+            is_active = constraint_state.island.improved[i_island, i_b]
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Assign may lose precision: u1 <- i32
+[W 10/25/26 18:31:22.809 14370288] QuadrantsWarning
+While compiling `_kernel_solve_graph_c700_1`, File "/Users/anupamkaul/other_git/hugging-face/lerobot/.conda_env/lib/python3.12/site-packages/genesis/engine/solvers/rigid/constraint/solver_breakdown.py", line 147, in _func_update_qfrc_constraint_per_dof:
+                is_island_moving = constraint_state.island.improved[i_island,
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Assign may lose precision: u1 <- i32
+[W 10/25/26 18:31:22.811 14370288] QuadrantsWarning
+While compiling `_kernel_solve_graph_c700_1`, File "/Users/anupamkaul/other_git/hugging-face/lerobot/.conda_env/lib/python3.12/site-packages/genesis/engine/solvers/rigid/constraint/linesearch.py", line 1596, in func_exit_islands_coop:
+            is_active = constraint_state.island.improved[i_island, i_b]
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Assign may lose precision: u1 <- i32
+[Genesis] [18:31:30] [INFO] Building visualizer...
+[Genesis] [18:31:30] [INFO] Viewer created. Resolution: 1489×1117, refresh_rate: 60, dt: 0.002s, realtime_factor: 1.0 (real-time target: 500.0 FPS).
+🎯 Inference active! Watching the trained policy control the humanoid...
+[Genesis] [18:31:31] [INFO] Running at 1.24 FPS (1.24 FPS per env, 1 envs).
+[Genesis] [18:31:32] [INFO] Running at 2.45 FPS (2.45 FPS per env, 1 envs).
+[Genesis] [18:31:32] [INFO] Running at 15.09 FPS (15.09 FPS per env, 1 envs).
+[Genesis] [18:31:32] [INFO] Running at 27.22 FPS (27.22 FPS per env, 1 envs).
+[Genesis] [18:31:32] [INFO] Running at 39.61 FPS (39.61 FPS per env, 1 envs).
+[Genesis] [18:31:32] [INFO] Running at 51.77 FPS (51.77 FPS per env, 1 envs).
+[Genesis] [18:31:32] [INFO] Running at 62.29 FPS (62.29 FPS per env, 1 envs).
+[Genesis] [18:31:32] [INFO] Running at 73.53 FPS (73.53 FPS per env, 1 envs).
+
