@@ -156,6 +156,17 @@ if __name__ == "__main__":
         # 2. Construct a mask of all 64 heights
         fallen_mask = (live_heights < 0.55 ) | torch.isnan(live_heights)
 
+        # -- this part of the code makes sure that the other set that falls, remains fallen..
+        # 
+        # make sure the fall check is only applied to the set of humanoids that use policy
+        # ONLY allow even indices to trigger a reset (since odd ones are frozen)
+
+        allowed_to_reset_mask = (env_indices % 2 == 0)
+        fallen_mask = fallen_mask & allowed_to_reset_mask
+
+        # -- end of this part (comment it out to see alternate resets happening)
+        # ------------------------------------------------
+
         # 3. Find the exact indices of the environments that need a reset
         reset_env_ids = torch.where(fallen_mask)[0] 
 
@@ -164,18 +175,10 @@ if __name__ == "__main__":
             print(f"🔄 Resetting {len(reset_env_ids)} fallen humanoids at indices: {reset_env_ids.tolist()}")
 
             # Genesis allows you to pass env_ids to restrict state-setting to specific sub-scenes
-
             
             humanoid.set_dofs_position(position = standing_pose[reset_env_ids], envs_idx=reset_env_ids)
             humanoid.set_dofs_velocity(velocity = torch.zeros_like(standing_pose[reset_env_ids]), envs_idx=reset_env_ids)
 
-        '''
-        if live_height < 0.55 or live_height != live_height:
-            print(f"🔄 Falling threshold reached ({live_height:.2f}m)! Resetting stance parameters...")
-            humanoid.set_dofs_position(standing_pose)
-            humanoid.set_dofs_velocity(torch.zeros_like(standing_pose))
-        '''
-            
         # Enforce execution time break step to let macOS handle window event frames fluidly
         #time.sleep(0.01)
 
