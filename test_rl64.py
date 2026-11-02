@@ -55,6 +55,9 @@ if __name__ == "__main__":
     # from inference of 1 humanoid, move to 64 humanoids 
     num_envs = 64
     scene.build(n_envs=num_envs, env_spacing=(3.0, 3.0))
+
+    # in this version, I will have some of the humanoids act on policy
+    # and have some not and fall down completely. See if that works.
     
     # Secure tracking links
     torso = humanoid.get_link("torso_link")
@@ -96,7 +99,6 @@ if __name__ == "__main__":
         
         # Construct isolated observation tensor matrix explicitly targeted to mps device
         obs_base = torch.cat([q, v, torso_velocities, torso_height], dim=-1).to('mps')
-        # obs_base = torch.cat([q, v, torso_velocities, torso_height], dim=64).to('mps')
         
         # Pad or slice to align observations cleanly to 58 dimensions
         if obs_base.shape[-1] < CHECKPOINT_OBS:
@@ -127,10 +129,38 @@ if __name__ == "__main__":
         live_height = torso.get_pos()[0, 2].item()
         
         # Robust fall checking
+
+        # First, instead of biasing everything on the first humanoid, we vectorize the
+        # obs across all 4 and watch this tensor independently for fall analytics and take
+        # actions only on the ones that are falling down
+
+        # 1. Pull the height of the torso link across all 64 parallel environments 
+        # torso.get_pos() shape is (64, 3) -> we grab index 2 for the Z-axis (height)
+
+        live_heights = torso.get_pos()[:, 2]  # this becomes a 64 vector of heights..
+
+        # 2. Construct a mask of all 64 heights
+        fallen_mask = (live_heights < 0.55 ) | torch.isnan(live_heights)
+
+        # 3. Find the exact indices of the environments that need a reset
+        reset_env_ids = torch.where(fallen_mask)[0] 
+
+        # 4. If any enviroments have fallen, apply reset targets
+        if len(reset_env_ids) > 0:
+            print(f"🔄 Resetting {len(reset_env_ids)} fallen humanoids at indices: {reset_env_ids.tolist()}")
+
+            # Genesis allows you to pass env_ids to restrict state-setting to specific sub-scenes
+
+            
+            humanoid.set_dofs_position(position = standing_pose[reset_env_ids], envs_idx=reset_env_ids)
+            humanoid.set_dofs_velocity(velocity = torch.zeros_like(standing_pose[reset_env_ids]), envs_idx=reset_env_ids)
+
+        '''
         if live_height < 0.55 or live_height != live_height:
             print(f"🔄 Falling threshold reached ({live_height:.2f}m)! Resetting stance parameters...")
             humanoid.set_dofs_position(standing_pose)
             humanoid.set_dofs_velocity(torch.zeros_like(standing_pose))
+        '''
             
         # Enforce execution time break step to let macOS handle window event frames fluidly
         #time.sleep(0.01)
