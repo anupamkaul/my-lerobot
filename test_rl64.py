@@ -117,7 +117,7 @@ if __name__ == "__main__":
         # Extract actions and match them to the current robot's degrees of freedom
         active_actions = action_means[:, :num_actions]
         target_positions = standing_pose + active_actions * 0.3
-        
+
         # Pass position targets directly down into control pipeline
         humanoid.control_dofs_position(target_positions)
         
